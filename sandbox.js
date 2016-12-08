@@ -22,9 +22,9 @@
 	Game.prototype.play = function () {
 		if (this.board.scored()) {
 			window.clearInterval(this.playInterval);
-			this.getReady()
+			this.getReady();
 		} else {
-			this.board.play();			
+			this.board.play();
 		}
 	};
 
@@ -37,5 +37,5 @@
 		this.playInterval = window.setInterval(this.play.bind(this), "5");
 	};
 
-	
+
 })();

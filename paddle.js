@@ -1,5 +1,5 @@
 (function () {
-	
+
 	if (typeof PingPong === "undefined") {
     	window.PingPong = {};
   	}
@@ -21,7 +21,7 @@
 				119: [0, -2],
 				115: [0, 2],
 			}
-		}
+		};
 		this.setPosition();
 		this.setListeners();
 	};
@@ -62,7 +62,7 @@
 	Paddle.prototype.setDirection = function (event) {
 		var keyPressed = event.keyCode;
 		if (this.movements[this.side][keyPressed]) {
-			this.direction = this.movements[this.side][keyPressed];			
+			this.direction = this.movements[this.side][keyPressed];
 		}
 	};
 
@@ -94,5 +94,5 @@
 		return this.position[1] <= 0;
 	};
 
-	
+
 })();
