@@ -15,14 +15,14 @@ Ball.prototype.randomDirection = function() {
 
 Ball.prototype.move = function(){
   // Up & Down rebound
-  if (this.y <= 0 || this.y >= this.original_y*2) {
+  if (this.y <= 0 || this.y >= (this.original_y*2 + 20)) {
     this.direction_y *= -1;
 
     this.y += this.direction_y;
   } else
   // Left & Right Rebound
-  if ((this.x <= 20    && this.paddle1.hitBall(this.y)) ||
-      (this.x >= 1000 && this.paddle2.hitBall(this.y))) {
+  if ((this.x <= 40    && this.paddle1.hitBall(this.y)) ||
+      (this.x >= 960 && this.paddle2.hitBall(this.y))) {
     this.direction_x *= -1;
     this.x += this.direction_x;
 
@@ -45,7 +45,7 @@ Ball.prototype.pointScored = function(){
 // returns winner paddle or false
 Ball.prototype.winner = function(){
   if (this.x <= 0 || this.x >= this.original_x * 2) {
-    return (this.x <= 20 ? this.paddle1 : this.paddle2);
+    return (this.x <= 0 ? this.paddle1 : this.paddle2);
   } else {
     return false;
   }

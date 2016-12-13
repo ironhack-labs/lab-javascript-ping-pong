@@ -1,7 +1,7 @@
 function Board() {
-  this.paddle1 = new Paddle(0,    300);
-  this.paddle2 = new Paddle(1000, 300);
-  this.ball    = new Ball(500,300, this.paddle1, this.paddle2);
+  this.paddle1 = new Paddle(20,  250);
+  this.paddle2 = new Paddle(960, 250);
+  this.ball    = new Ball(495,250, this.paddle1, this.paddle2);
   this.gameStatus = false;
 }
 
@@ -12,7 +12,7 @@ Board.prototype.start = function(){
   } else {
     this.gameStatus = setInterval(function(){
       self.checkGame();
-    }, 100);
+    }, intervalTime);
   }
 };
 

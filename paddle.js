@@ -5,7 +5,8 @@ function Paddle(x,y) {
   this.score = 0;
 }
 Paddle.prototype.restart = function(){
-  this.y = this.original_x;
+  this.x = this.original_x;
+  this.y = this.original_y;
 };
 
 Paddle.prototype.hitBall = function(ball_y){
