@@ -11,7 +11,7 @@ function Ball(x,y, paddle1, paddle2) {
 Ball.prototype.randomDirection = function() {
   this.direction_x = (Math.random() > 0.5) ? -5 : 5;
   this.direction_y = (Math.floor(Math.random() * 6) + 1);
-}
+};
 
 Ball.prototype.move = function(){
   // Up & Down rebound
@@ -27,28 +27,28 @@ Ball.prototype.move = function(){
     this.x += this.direction_x;
     this.y += this.direction_y;
   }
-}
+};
 
 Ball.prototype.pointScored = function(){
   if (this.winner()) {
-    this.winner().score++
+    this.winner().score++;
     return true;
   } else {
     return false;
   }
-}
+};
 
 // returns winner paddle or false
 Ball.prototype.winner = function(){
   if (this.x <= 0 || this.x >= this.original_x * 2) {
-    return (this.x <= 0 ? paddle1 : paddle2)
+    return (this.x <= 0 ? paddle1 : paddle2);
   } else {
     return false;
   }
-}
+};
 
 Ball.prototype.restart = function(){
   this.x = this.original_x;
   this.y = this.original_y;
   this.randomDirection();
-}
+};

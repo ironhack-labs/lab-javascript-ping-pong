@@ -6,8 +6,9 @@ function Paddle(x,y) {
 }
 Paddle.prototype.restart = function(){
   this.y = this.original_x;
-}
+};
+
 Paddle.prototype.hitBall = function(ball_y){
   var RANGE = 100;
   return (Math.abs(ball_y - this.y) < RANGE);
-}
+};
