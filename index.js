@@ -32,7 +32,16 @@ function renderGame(){
   setInterval(function(){
     renderBall();
     renderPaddle();
+    renderScore();
   }, 20);
+}
+
+function renderScore(){
+  var scorePaddle1 = document.getElementById("score-paddle1");
+  var scorePaddle2 = document.getElementById("score-paddle2");
+
+  scorePaddle1.innerHTML = board.paddle1.score;
+  scorePaddle2.innerHTML = board.paddle2.score;
 }
 
 function renderBall(){

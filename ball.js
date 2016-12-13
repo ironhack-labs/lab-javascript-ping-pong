@@ -21,7 +21,6 @@ Ball.prototype.move = function(){
     this.y += this.direction_y;
   } else
   // Left & Right Rebound
-  console.log("this paddle 1 Y", this.paddle1);
   if ((this.x <= 20    && this.paddle1.hitBall(this.y)) ||
       (this.x >= 1000 && this.paddle2.hitBall(this.y))) {
     this.direction_x *= -1;
@@ -46,7 +45,7 @@ Ball.prototype.pointScored = function(){
 // returns winner paddle or false
 Ball.prototype.winner = function(){
   if (this.x <= 0 || this.x >= this.original_x * 2) {
-    return (this.x <= 20 ? paddle1 : paddle2);
+    return (this.x <= 20 ? this.paddle1 : this.paddle2);
   } else {
     return false;
   }

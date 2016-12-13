@@ -27,3 +27,8 @@ body {
   background-color: blue;
   border-radius: 10px;
 }
+
+.score span {
+  color: #fff;
+  font-size: 40px;
+}
