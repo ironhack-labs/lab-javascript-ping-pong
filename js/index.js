@@ -1,5 +1,5 @@
 var board = new Board();
-var intervalTime = 50;
+var intervalTime = 10;
 
 $('#start').on('click', function(){
   board.start();

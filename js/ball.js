@@ -15,7 +15,7 @@ Ball.prototype.randomDirection = function() {
 
 Ball.prototype.move = function(){
   // Up & Down rebound
-  if (this.y <= 0 || this.y >= (this.original_y*2 + 20)) {
+  if (this.y <= 0 || this.y >= (this.original_y*2 + 70)) {
     this.direction_y *= -1;
 
     this.y += this.direction_y;

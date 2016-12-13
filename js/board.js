@@ -38,7 +38,7 @@ Board.prototype.restart = function(){
 
 Board.prototype.gameOver = function(){
   this.stop();
-  console.log("the winner is...");
+  document.getElementById("winner").toggleClass("hide");
 };
 
 Board.prototype.movePaddle = function(){
