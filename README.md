@@ -15,7 +15,7 @@ After this learning unit, you will be able to:
 
 ## Introduction
 
-![Game pic](https://i.imgur.com/VH0aCeX.jpg)
+![Ping Pong Pic](https://i.imgur.com/XOUlFqu.png)
 
 In this Learning Unit, we are going to build one of the first games ever created: the [Ping Pong](https://en.wikipedia.org/wiki/Pong).
 
