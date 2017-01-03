@@ -13,6 +13,27 @@ After this learning unit, you will be able to:
 - Separate the logic of the game from the JavaScript DOM operations
 - Structure JavaScript files according to the game classes
 
+## Requirements
+
+- [Fork this repo](https://guides.github.com/activities/forking/)
+- Clone this repo into your `~/code/labs`
+
+## Submission
+
+Upon completion, run the following commands
+```
+$ git add .
+$ git commit -m "done"
+$ git push origin master
+```
+Navigate to your repo and create a Pull Request -from your master branch to the original repository master branch.
+
+In the Pull request name, add your name and last names separated by a dash "-"
+
+## Deliverables
+
+Remember to add every file needed to make your game work. Don't forget external libraries (`lib/`) and other resources.
+
 ## Introduction
 
 ![Ping Pong Pic](https://i.imgur.com/XOUlFqu.png)
