@@ -1,0 +1,46 @@
+body {
+}
+
+#board {
+}
+
+.paddle {
+}
+
+#paddle1 {
+}
+
+#paddle2 {
+}
+
+#net {
+}
+
+#ball {
+}
+
+.score span {
+}
+
+.left {
+}
+
+.right {
+}
+
+button {
+}
+
+#winner {
+}
+
+#winner.hide {
+}
+
+@-webkit-keyframes slide {
+    100% { top: 20px; }
+}
+
+@keyframes slide {
+    100% { top: 20px; }
+}
