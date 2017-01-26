@@ -2,21 +2,43 @@ body {
 }
 
 #board {
+  width: 800px;
+  height: 500px;
+  background-color: #207d24;
+  /*background-image: url(../img/board-background.jpg);*/
+  margin: 100px auto;
+  position: relative;
 }
 
 .paddle {
+  width: 20px;
+  height: 80px;
+  position: absolute;
 }
 
 #paddle1 {
+  background-color: #8e0000;
+  left: 20px;
+  top: 210px;
 }
 
 #paddle2 {
+  background-color: #10008e;
+  left: 760px;
+  top: 210px;
 }
 
 #net {
 }
 
 #ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color:#ffffff;
+  position: absolute;
+  top: 240px;
+  left: 390px;
 }
 
 .score span {
