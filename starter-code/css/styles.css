@@ -2,12 +2,22 @@ body {
 }
 
 #board {
+  position:relative;
+  background-color: green;
+  width: 1200px;
+  height: 550px;
 }
 
 .paddle {
 }
 
 #paddle1 {
+  position:absolute;
+  background-color: black;
+  height: 90px;
+  width: 30px;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 #paddle2 {
@@ -15,8 +25,19 @@ body {
 
 #net {
 }
+#keypress{
+  background-color: white;
+  width: 100px;
+  height: 100px;
+}
 
 #ball {
+  position:relative;
+  width: 20px;
+  height: 20px;
+  margin-left: 275px;
+
+  background-color: black;
 }
 
 .score span {
