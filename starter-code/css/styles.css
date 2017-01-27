@@ -13,20 +13,27 @@ body {
 
 .paddle {
   position: relative;
-  z-index: 5;
-  top: 100px;
-  left: 300px;
   background-color: red;
   width: 10px;
   height: 100px;
-
 }
 
 #paddle1 {
+  position: relative;
+  z-index: 5;
+  top: 100px;
+  left: 300px;
 
 }
 
 #paddle2 {
+  position: absolute;
+  background-color: red;
+  width: 10px;
+  height: 100px;
+  z-index: 5;
+  top: 100px;
+  right: 350px;
 
 }
 
