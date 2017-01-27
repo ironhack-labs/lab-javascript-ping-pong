@@ -1,5 +1,5 @@
 var PADDLE1_SPEED = 20;
-var PADDLE2_SPEED = 1;
+var PADDLE2_SPEED = 10;
 var BOARD_HEIGHT = 500; // should keep track of styles values
 var BOARD_WIDTH = 900; // should keep track of styles values
 var PADDLE_HEIGHT = 100; // should keep track of styles values

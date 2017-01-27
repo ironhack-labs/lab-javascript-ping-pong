@@ -11,12 +11,13 @@ function Ball(x, y, paddle1, paddle2) {
 //must obviously go in opposite direction of hit, choose random x, gives our y.
 Ball.prototype.randomDirection = function() {
 
-    var c = Math.sqrt(36);
+    var c = 6;
     var negOrPos = Math.random() >= 0.5 ? 1 : -1;
     // should return number between -2 and 2, inclusive
-    this.xChange = Math.round( Math.random() * (2*c) - c);
+    this.xChange = Math.round( Math.random() * c) * negOrPos;
+    negOrPos = Math.random() >= 0.5 ? 1 : -1;
     // should return number based on hypotenuse.
-    this.yChange = Math.round((Math.pow(c, 2) - Math.pow(this.xChange, 2)) * negOrPos);
+    this.yChange = Math.round( Math.sqrt((Math.pow(c, 2) - Math.pow(this.xChange, 2)) ) * negOrPos);
 
     console.log("xchange" + this.xChange);
     console.log("ychange" + this.yChange);
