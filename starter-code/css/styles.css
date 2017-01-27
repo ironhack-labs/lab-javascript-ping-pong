@@ -1,16 +1,34 @@
 body {
+  position: absolute;
+  background-image: url("../img/board-background.jpg");
+  background-color: #cccccc;
+
 }
 
 #board {
+  /*background-image: url("../img/pista1.png");*/
+  background-color: #000000;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  margin: 0 auto;
+  width: 1000px;
+  height: 600px;
+
 }
 
 .paddle {
+  position: absolute;
+  width: 5px;
+  height: 50px;
 }
 
 #paddle1 {
+  color: green;
 }
 
 #paddle2 {
+  color: red;
 }
 
 #net {
