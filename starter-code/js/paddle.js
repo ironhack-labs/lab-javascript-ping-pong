@@ -21,31 +21,28 @@ Paddle.prototype.restart = function(x, y){
 };
 
 // check if paddle hit ball
+// NEEDS MORE WORK
 Paddle.prototype.hitBall = function(ball){
-  if (this.xPos < 50){
-    // we are paddle1
-    if (ball.xPos - BALL_DIAMETER/2 <= this.posX + PADDLE_WIDTH/2){
-      if (ball.yPos + BALL_DIAMETER/2 >= this.yPos - PADDLE_HEIGHT/2 ||
-          ball.yPos - BALL_DIAMETER/2 <= this.yPos + PADDLE_HEIGHT/2){
-        // we hit the paddle1
-        return true;
-      }
-      return false;
-    }
-    return false;
-  }
-  else {
-    //we are paddle2
-    if (ball.xPos + BALL_DIAMETER/2 >= this.posX - PADDLE_WIDTH/2){
-      if (ball.yPos + BALL_DIAMETER/2 >= this.yPos - PADDLE_HEIGHT/2 ||
-          ball.yPos - BALL_DIAMETER/2 <= this.yPos + PADDLE_HEIGHT/2){
-        // we hit the paddle1
-        return true;
-      }
-      return false;
-    }
-    return false;
-  }
+  var ballTop = ball.yPos;
+  var ballBottom = ball.yPos + BALL_DIAMETER;
+  var ballLeft = ball.xPos;
+  var ballRight = ball.xPos + BALL_DIAMETER;
+  var padTop = this.yPos;
+  var padBottom = this.yPos + PADDLE_HEIGHT;
+  var padLeft = this.xPos;
+  var padRight = this.xPos + PADDLE_WIDTH;
 
+  // check x collision
+  if (ballLeft <= padRight && ballLeft >= padLeft ||
+      ballRight >= padLeft && ballRight <= padRight){
+      // we are withiin a pads width, now check height
+      if (ballBottom >= padTop && ballBottom <= padBottom ||
+          ballTop <= padBottom && ballTop >= padTop){
+            // we got a hit!
+            console.log("HIT" + this);
+            return true;
+      }
+      return false;
+  }
   return false;
 };

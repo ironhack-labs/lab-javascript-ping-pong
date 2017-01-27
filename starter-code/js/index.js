@@ -1,10 +1,11 @@
 var PADDLE1_SPEED = 20;
-var PADDLE2_SPEED = 10;
+var PADDLE2_SPEED = 4;
 var BOARD_HEIGHT = 500; // should keep track of styles values
 var BOARD_WIDTH = 900; // should keep track of styles values
 var PADDLE_HEIGHT = 100; // should keep track of styles values
 var PADDLE_WIDTH = 20;
 var BALL_DIAMETER = 20; // ''
+var INTERVAL_TIME = 25;
 
 var board = new Board();
 
@@ -88,12 +89,16 @@ $(document).on('keydown', function(e){
 
 //
 function activatePaddle2(x, y) {
-  if (y > board.paddle2.yPos){
+  if (y + BALL_DIAMETER/2 > board.paddle2.yPos + PADDLE_HEIGHT/2){
     //paddle2 must go down
-    board.paddle2.yPos += PADDLE2_SPEED;
+    board.paddle2.yPos = (board.paddle2.yPos + PADDLE2_SPEED >= BOARD_HEIGHT - PADDLE_HEIGHT) ?
+      BOARD_HEIGHT - PADDLE_HEIGHT : board.paddle2.yPos + PADDLE2_SPEED;
+
   } else {
     //paddle2 must go up
-    board.paddle2.yPos -= PADDLE2_SPEED;
+    board.paddle2.yPos = (board.paddle2.yPos - PADDLE2_SPEED < 0) ?
+      0 : board.paddle2.yPos - PADDLE2_SPEED;
+
   }
 }
 
@@ -107,6 +112,8 @@ function renderGame(){
 function renderScore(){
   var homeScoreSpan = $('#home-score');
   var awayScoreSpan = $('#away-score');
+  homeScoreSpan.html(board.homeScore);
+  awayScoreSpan.html(board.awayScore);
 }
 
 //paint ball
