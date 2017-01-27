@@ -1,4 +1,5 @@
 body {
+  font-family: 'Open Sans', sans-serif;
 }
 
 #board {
@@ -9,6 +10,12 @@ body {
   background-image: url("../img/board-background.jpg");
 }
 
+#scoreboard {
+  font-size: 36px;
+  display: inline;
+  margin-left: 200px;
+}
+
 #start {
   color: #fff;
   font-size: 20px;
@@ -16,10 +23,10 @@ body {
   width: 200px;
   height: 40px;
   background-color: #FF5D73;
-  display: block;
+
   border: 0px;
   border-radius: 30px;
-  margin: 0px 0px 10px 50px;
+  margin: 10px 5px 10px 100px;
 }
 
 .paddle {
