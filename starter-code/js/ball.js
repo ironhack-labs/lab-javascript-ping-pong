@@ -62,6 +62,6 @@ Ball.prototype.winner = function() {
 Ball.prototype.restart = function() {
     this.xPos = 440;
     this.yPos = 230;
-    this.winner = null;
+    this.scoringPaddle = null;
     this.randomDirection();
 };
