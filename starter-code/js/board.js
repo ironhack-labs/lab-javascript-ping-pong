@@ -1,5 +1,16 @@
 function Board() {
+  this.Map =
+  [ ["X","X","X","X","X","X","X","X","X","X","X"],
+    ["X","X","X","X","X","X","X","X","X","X","X"],
+    ["X","X","X","X","X","X","X","X","X","X","X"],
+    ["X","X","X","X","X","X","X","X","X","X","X"],
+    ["X","X","X","X","X","X","X","X","X","X","X"]
+
+  ];
 }
+
+//we represent the board with a grid of 5*11
+
 
 Board.prototype.start = function(){
 };
