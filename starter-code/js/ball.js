@@ -26,17 +26,13 @@ Ball.prototype.restart = function(){
 
 function GetChar (event){
             var chCode = ('charCode' in event) ? event.charCode : event.keyCode;
-            alert ("The Unicode character code is: " + chCode);
 
             switch (chCode) {
               case 119:
-              
-                  $("#paddle1").css('margin-top', '20px');
-                    chCode = 0;
+                  $("#paddle1").css('margin-top', '-=10px');
                 break;
               case 115:
-                $("#paddle1").css('margin-botton', '20px');
-                chCode = 0;
+                $("#paddle1").css('margin-top', '+=10px');
                 break;
               default:
               }
