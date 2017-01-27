@@ -1,7 +1,24 @@
 body {
+
 }
 
 #board {
+  background-color: green;
+  margin-top: 110px;
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin-left: 250px;
+}
+
+#ball {
+  position: absolute;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  left: 390px;
+  bottom: 240px;
+  border-radius: 100%;
 }
 
 .paddle {
@@ -16,8 +33,7 @@ body {
 #net {
 }
 
-#ball {
-}
+
 
 .score span {
 }
