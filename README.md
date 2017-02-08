@@ -1,4 +1,3 @@
-
 ![Ironhack Logo](https://i.imgur.com/1QgrNNw.png)
 
 # JS | Pong Game
@@ -9,7 +8,7 @@
 
 After this learning unit, you will be able to:
 
-- Build your own  Pong game, using HTML, CSS and JavaScript
+- Build your own Pong game, using HTML, CSS and JavaScript
 - Create the logic of the game using JavaScript classes
 - Separate the logic of the game from the JavaScript DOM operations
 - Structure JavaScript files according to the game classes
@@ -39,9 +38,9 @@ Remember to add every file needed to make your game work. Don't forget external 
 
 ![Ping Pong Pic](https://i.imgur.com/XOUlFqu.png =300)
 
-In this Learning Unit, we are going to build one of the first computer games ever created:  [Pong](https://en.wikipedia.org/wiki/Pong).
+In this Learning Unit, we are going to build one of the first computer games ever created: [Pong](https://en.wikipedia.org/wiki/Pong).
 
-We have a ball and two paddles at each side of a table. 
+We have a ball and two paddles at each side of a table.
 
 - The left paddle belongs to the user, and is going to be controlled with the keyboard arrows
 - The right paddle belongs to the computer, and is going to be automatically controlled by the application
@@ -60,7 +59,7 @@ The goal is to score 7 points against the computer. A point is won if the ball r
 - In the `ball.js` file we will hold the functions to make the ball move and recognize the edges. If this happens, rebound in the opposite direction.
 - These functions are:
 	- Set a random direction to start the movement
-	- Keep moving the ball in the same direction until it reaches an obstable, or the right or left side of the board
+	- Keep moving the ball in the same direction until it reaches an obstacle, or the right or left side of the board
 	- Score a point to a paddle when needed
 	- Restart the ball position when a point is scored
 
@@ -87,4 +86,3 @@ In this learning unit we created a Ping Pong game by separating at first the log
 ## Extra Resources
 
 - [Ping Pong with Canvas](http://cssdeck.com/labs/ping-pong-game-tutorial-with-html5-canvas-and-sounds) - A tutorial to create another version of the ping pong game using canvas.
-
