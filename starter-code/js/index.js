@@ -32,7 +32,7 @@ $(document).ready(function(){
           board.compScore++;
           $(".right span").html(board.compScore);
           board.restart(userPaddle, computerPaddle, ball);
-          if(board.compScore === 3){
+          if(board.compScore === 10){
             board.gameOver();
             clearInterval(peloticaMoviendose);
           }
@@ -53,7 +53,7 @@ $(document).ready(function(){
         sumX = computerPaddle.hitBall(ball.y, computerPaddle.y, sumX);
       }
 
-    }, 10);
+    }, 40);
 
   });
 
