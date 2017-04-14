@@ -6,8 +6,8 @@ function Paddle(x,y) {
   this.score = 0;
 }
 Paddle.prototype.restart = function(){
-  this.x = original_x;
-  this.y = original_y;
+  this.x = this.original_x;
+  this.y = this.original_y;
 };
 
 Paddle.prototype.moveUp = function(){

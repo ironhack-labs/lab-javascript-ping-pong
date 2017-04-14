@@ -33,6 +33,6 @@ Ball.prototype.winner = function(){
 };
 
 Ball.prototype.restart = function(){
-  this.x=original_x;
-  this.y=original_y;
+  this.x=this.original_x;
+  this.y=this.original_y;
 };
