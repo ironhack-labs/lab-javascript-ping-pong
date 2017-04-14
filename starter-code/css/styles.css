@@ -45,13 +45,27 @@ body {
   border-radius: 50%;
 }
 
+.score{
+  display: inline-block;
+  height: 70px;
+  width: 50px;
+  position: absolute;
+  top: 650px;
+}
+
 .score span {
+  font-size: 60px;
+  font-weight: bold;
 }
 
 .left {
+  color: red;
+  left: 300px;
 }
 
 .right {
+  color: white;
+  left: 770px;
 }
 
 button {
@@ -59,6 +73,7 @@ button {
   width: 100px;
   background-color: #DDDDDD;
   margin-left: 490px;
+  display: inline-block;
 }
 
 #winner {

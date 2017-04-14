@@ -28,25 +28,17 @@ $(document).ready(function(){
       else if(ball.y>=630) sumY=-4;
       if(ball.x<=75){ //sumX=10;
         if(ball.x<=60){
-          //sumar punto correspondiente
-          userPaddle.restart();
-          setPosition("#paddle1", "left", userPaddle.x);
-          setPosition("#paddle1", "top", userPaddle.y);
-          computerPaddle.restart();
-          setPosition("#paddle2", "left", computerPaddle.x);
-          setPosition("#paddle2", "top", computerPaddle.y);
-          ball.restart();
-          setPosition("#ball", "left", ball.x);
-          setPosition("#ball", "top", ball.y);
+          board.compScore++;
+          $(".right span").html(board.compScore);
+          board.restart(userPaddle, computerPaddle, ball);
           clearInterval(peloticaMoviendose);
         }
         sumX = userPaddle.hitBall(ball.y, userPaddle.y, sumX);
       } else if(ball.x>=1020){ //sumX=-10;
           if(ball.x>=1035){
-            //sumar punto correspondiente
-            userPaddle.restart();
-            computerPaddle.restart();
-            ball.restart();
+            board.userScore++;
+            $(".left span").html(board.userScore);
+            board.restart(userPaddle, computerPaddle, ball);
             clearInterval(peloticaMoviendose);
           }
         sumX = computerPaddle.hitBall(ball.y, computerPaddle.y, sumX);
@@ -103,9 +95,7 @@ $(document).ready(function(){
   function getPosition(id, where){
     return parseInt($(id).css(where).replace("px",""));
   }
-  function setPosition(id, where, pos){
-    return $(id).css(where, pos);
-  }
+
 
 
 
