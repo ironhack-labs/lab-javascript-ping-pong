@@ -1,8 +1,12 @@
-function Board() {
+function Board(userPaddle, compPaddle, ball) {
+  this.userPaddle = userPaddle;
+  this.compPaddle = compPaddle;
+  this.ball = ball;
 }
 
-Board.prototype.start = function(){
-};
+// Board.prototype.start = function(ball, sumX, sumY){
+//   ball.move(sumX, sumY);
+// };
 
 Board.prototype.checkGame = function(){
 };
