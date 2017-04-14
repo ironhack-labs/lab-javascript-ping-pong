@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  $("#end-play").hide();
   var board = new Board();
   var x1 = getPosition("#paddle1", "left");
   var y1 = getPosition("#paddle1", "top");
@@ -31,6 +32,10 @@ $(document).ready(function(){
           board.compScore++;
           $(".right span").html(board.compScore);
           board.restart(userPaddle, computerPaddle, ball);
+          if(board.compScore === 3){
+            board.gameOver();
+            clearInterval(peloticaMoviendose);
+          }
           clearInterval(peloticaMoviendose);
         }
         sumX = userPaddle.hitBall(ball.y, userPaddle.y, sumX);
@@ -39,12 +44,16 @@ $(document).ready(function(){
             board.userScore++;
             $(".left span").html(board.userScore);
             board.restart(userPaddle, computerPaddle, ball);
+            if(board.userScore === 10) {
+              board.win();
+              clearInterval(peloticaMoviendose);
+            }
             clearInterval(peloticaMoviendose);
           }
         sumX = computerPaddle.hitBall(ball.y, computerPaddle.y, sumX);
       }
 
-    }, 100);
+    }, 10);
 
   });
 
@@ -105,23 +114,23 @@ $(document).ready(function(){
 
 
 
-  function updateState(){
-  }
-
-
-
-
-
-  function renderGame(){
-  }
-
-  function renderScore(){
-  }
-
-  function renderBall(){
-  }
-
-  function renderPaddle(){
-  }
+  // function updateState(){
+  // }
+  //
+  //
+  //
+  //
+  //
+  // function renderGame(){
+  // }
+  //
+  // function renderScore(){
+  // }
+  //
+  // function renderBall(){
+  // }
+  //
+  // function renderPaddle(){
+  // }
 
 });

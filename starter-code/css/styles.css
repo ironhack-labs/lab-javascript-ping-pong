@@ -47,14 +47,14 @@ body {
 
 .score{
   display: inline-block;
-  height: 70px;
+  height: 80px;
   width: 50px;
   position: absolute;
-  top: 650px;
+  top: 100px;
 }
 
 .score span {
-  font-size: 60px;
+  font-size: 78px;
   font-weight: bold;
 }
 
@@ -64,7 +64,7 @@ body {
 }
 
 .right {
-  color: white;
+  color: blue;
   left: 770px;
 }
 
@@ -76,11 +76,27 @@ button {
   display: inline-block;
 }
 
-#winner {
+#end-play{
+  background-color: white;
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  top: 200px;
+  left: 350px;
+  text-align: center;
+}
+
+#end-play p{
+  font-size: 50px;
+  font-weight: bold;
+}
+
+
+/*#winner {
 }
 
 #winner.hide {
-}
+}*/
 
 @-webkit-keyframes slide {
     100% { top: 20px; }

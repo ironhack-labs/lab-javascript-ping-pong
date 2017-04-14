@@ -25,12 +25,12 @@ Ball.prototype.move = function(sumX, sumY){
   $("#ball").css("top", nextStepY);
 };
 
-Ball.prototype.pointScored = function(){
-};
-
-// returns winner paddle or false
-Ball.prototype.winner = function(){
-};
+// Ball.prototype.pointScored = function(){
+// };
+//
+// // returns winner paddle or false
+// Ball.prototype.winner = function(){
+// };
 
 Ball.prototype.restart = function(){
   this.x=this.original_x;

@@ -10,11 +10,11 @@ function Board(userPaddle, compPaddle, ball) {
 //   ball.move(sumX, sumY);
 // };
 
-Board.prototype.checkGame = function(){
-};
-
-Board.prototype.stop = function(){
-};
+// Board.prototype.checkGame = function(){
+// };
+//
+// Board.prototype.stop = function(){
+// };
 
 Board.prototype.restart = function(userPaddle, computerPaddle, ball){
   userPaddle.restart();
@@ -32,7 +32,14 @@ Board.prototype.restart = function(userPaddle, computerPaddle, ball){
   }
 };
 
-
+Board.prototype.win = function(){
+  $("#end-play").createTextNode("YOU WIN!!!");
+  $("#end-play").show();
+  return;
+};
 
 Board.prototype.gameOver = function(){
+  $("#end-play").append("<p>GAME OVER...</p>");
+  $("#end-play").show();
+  return;
 };
