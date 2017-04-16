@@ -1,4 +1,5 @@
 function Paddle(x,y) {
+  
 }
 Paddle.prototype.restart = function(){
 };

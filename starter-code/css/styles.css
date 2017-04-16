@@ -1,22 +1,48 @@
 body {
+  width: 90%;
+  text-align: center;
 }
 
 #board {
+  background-image: url(./../img/board-background.jpg);
+  width: 800px;
+  height: 400px;
+  background-color: green;
+  box-sizing: border-box;
 }
 
 .paddle {
+  position: absolute;
+  width: 18px;
+  height: 38px;
+  border-radius: 3px;
+  border: 2px solid black;
+  top: 300px;
 }
 
 #paddle1 {
+  left:20px;
+  background-color: red;
 }
 
 #paddle2 {
+  left:760px;
+  background-color: blue;
 }
 
 #net {
+  width: 100%;
 }
 
 #ball {
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 200px;
+  left: 400px;
+  background-image: url(./../img/ball.png);
+  width: 20px;
+  height: 20px;
 }
 
 .score span {
