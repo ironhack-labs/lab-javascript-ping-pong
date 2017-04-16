@@ -23,7 +23,7 @@ function activatePaddle2() {
   var computerPositionY = parseInt($("#paddle2").css("top").replace('px', ''));
 
 
-    $("#paddle2").css("top", ballPositionY+"px");
+    $("#paddle2").css("top", ballPositionY-50+"px");
 }
 
 function renderGame(){

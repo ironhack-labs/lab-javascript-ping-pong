@@ -15,8 +15,8 @@ Ball.prototype.move = function() {
     var movement = 4;
 
     if (0 <= this.positionX && this.positionX <= 980) {
-      console.log('position:',this.positionX);
-      console.log('direction: ', this.actualDirectionX);
+      //console.log('position:',this.positionX);
+      //console.log('direction: ', this.actualDirectionX);
 
         switch (this.actualDirectionX) {
             case 0:
@@ -35,8 +35,8 @@ Ball.prototype.move = function() {
     this.positionY = parseInt($("#ball").css("top").replace('px', ''));
 
     if (0 <= this.positionY && this.positionY <= 480) {
-      console.log('position:',this.positionY);
-      console.log('direction: ', this.actualDirectionY);
+      //console.log('position:',this.positionY);
+      //console.log('direction: ', this.actualDirectionY);
         switch (this.actualDirectionY) {
             case 0:
                 this.positionY += movement;
@@ -64,17 +64,21 @@ Ball.prototype.collisions = function(){
   if (ballY <= paddleY+100 && ballY >=  paddleY-10) {
     if (ballX <= paddleX+50) {
       this.actualDirectionX = 0;
-    }else if (ballX >=computerX-50) {
+    }
+  }
+  if (ballY <= computerY+100 && ballY >= paddleY-10) {
+    if (ballX >= computerX-10) {
       this.actualDirectionX = 1;
     }
+
   }
   // if (ballY <= computerY+100 && ballY >=  computerY-10) {
   //   if (ballX >= computerX) {
   //     this.actualDirectionX = 0;
   //   }
   // }
-  console.log("computerX: "+computerY);
-  console.log("ballX: "+ballY);
+  console.log("computerX: "+computerX);
+  console.log("ballX: "+ballX);
 
 };
 

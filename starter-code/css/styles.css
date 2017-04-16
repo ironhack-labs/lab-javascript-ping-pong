@@ -5,7 +5,7 @@ body {
   width: 1000px;
   height: 500px;
   margin: auto;
-  background-color: lightgrey;
+  background-color: #00D6BE;
   position: absolute;
   left: 200px;
 }
@@ -19,14 +19,14 @@ body {
 #paddle1 {
 transition: top .1s linear;
 left: : 0;
-background-color: black;
+background-color: #BE3B00;
 top: 0px;
 
 }
 
 #paddle2 {
 right: 0;
-background-color: white;
+background-color: #722300;
 top: 0px;
 
 }
@@ -38,7 +38,7 @@ top: 0px;
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  background-color: red;
+  background-color: white;
   position: relative;
   top: 300px;
   left: 500px;
