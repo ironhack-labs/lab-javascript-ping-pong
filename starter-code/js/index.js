@@ -1,23 +1,29 @@
 
-
-
-
-
-
-
 $( document ).ready(function() {
-  var board = new Board(200,400);
-  var ball = new Ball();
-  
+
+  var playOn = false;
+  var board = new Board(400,800);
+  var paddle1, paddle2;
+  var ball = new Ball(0,0,paddle1, paddle2, board);
+
+
   $('#start').on('click', function(){
-    board.start();
+    if (playOn) {
+      playOn=false;
+
+    } else {
+      playOn=true;
+      ball.restart();
+      game = setInterval(updateState, 33);
+
+    }
+    //board.start();
     activatePaddle2();
-    var game = setInterval(updateState, intervalTime);
+
     renderGame();
   });
 
   $(document).on('keydown', function(e){
-
     if (e.keyCode == 38 || e.keyCode == 40) {
       movePaddleTop(e.keyCode);
     } else {
@@ -25,27 +31,30 @@ $( document ).ready(function() {
     }
   });
 
-  function movePaddleTop (keycode){
-    alert($("paddle1").attr('top'));
-    var paddle = document.getElementById('paddle1');
-    var style = window.getComputedStyle(paddle);
-    var top = parseInt(style.top);
-    if (keycode == 38) {
-      paddle.style.top = (top - 20) + "px";
-    } else if (keycode == 40) {
-      paddle.style.top = (top + 20) + "px";
-    }
+  function updateState(){
+    ball.move();
   }
+
 });
 
 
-
-
-
-function updateState(){
+function movePaddleTop (keycode){
+  var paddle = document.getElementById('paddle1');
+  var style = window.getComputedStyle(paddle);
+  var top = parseInt(style.top);
+  if (keycode == 38) {
+    paddle.style.top = (top - 20) + "px";
+  } else if (keycode == 40) {
+    paddle.style.top = (top + 20) + "px";
+  }
 }
 
+
+
+
+
 function activatePaddle2() {
+
 }
 
 function renderGame(){

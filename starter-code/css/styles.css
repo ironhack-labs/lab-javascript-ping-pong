@@ -4,11 +4,13 @@ body {
 }
 
 #board {
+  position: relative;
   background-image: url(./../img/board-background.jpg);
   width: 800px;
   height: 400px;
   background-color: green;
   box-sizing: border-box;
+  display: inline-block;
 }
 
 .paddle {
@@ -31,15 +33,20 @@ body {
 }
 
 #net {
-  width: 100%;
+  position:absolute;
+  left:49%;
+  height: 100%;
+  width: 2%;
+  background-color: white;
+
 }
 
 #ball {
   background-color: white;
   border-radius: 10px;
   position: absolute;
-  top: 200px;
-  left: 400px;
+  top: 190px;
+  left: 390px;
   background-image: url(./../img/ball.png);
   width: 20px;
   height: 20px;
