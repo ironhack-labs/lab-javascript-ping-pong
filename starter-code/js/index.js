@@ -50,7 +50,7 @@ function checkPaddleControls() {
 }
 
 function checkMenuControls(){
-    if (keys[13]) {
+    if (keys[32]) {
         board.start();
     }
 }
