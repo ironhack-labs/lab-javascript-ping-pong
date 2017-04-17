@@ -7,6 +7,8 @@ function Ball(x,y, paddle1, paddle2, board) {
   this.direction = "NW";
   this.diameter = 20;
   this.board = board;
+  this.paddle1 = paddle1;
+  this.paddle2 = paddle2;
 }
 
 Ball.prototype.randomDirection = function() {
@@ -62,10 +64,45 @@ Ball.prototype.restart = function(){
 Ball.prototype.updatePosition = function (){
     this.element.style.top = this.top + "px";
     this.element.style.left = this.left + "px";
-    this.element.innerHTML = this.direction;
+    //this.element.innerHTML = this.direction;
 };
 
 Ball.prototype.checkBorders = function(){
+
+  var pad1RightSide = parseInt(paddle1.style.left) + parseInt(paddle1.style.width);
+  var pad2LeftSide = parseInt(paddle2.style.left);
+  console.log("pds1"+pad1RightSide );
+  console.log("pds2"+pad2LeftSide );
+
+  //Border collide
+  if (this.top <=0) {
+    this.changeDirection(this.direction, "top");
+  } else if (this.top >= (this.board.height - this.diameter)){
+    this.changeDirection(this.direction, "bottom");
+  //Paddle1Collide
+  } else if(this.left <= pad1RightSide) {
+    if (( (this.top+this.diameter) < parseInt(paddle1.style.top) ) || (this.top > (parseInt(paddle1.style.top)+parseInt(paddle1.style.height)) )){
+      document.getElementById("player2").innerHTML = parseInt(document.getElementById("player2").innerHTML) + 1;
+      this.restart();
+    } else {
+      this.changeDirection(this.direction, "left");
+    }
+  //Paddle2Collide
+  } else if  (this.left >= (pad2LeftSide - this.diameter)) {
+    if (( (this.top+this.diameter) < parseInt(paddle2.style.top) ) || (this.top > (parseInt(paddle2.style.top)+parseInt(paddle2.style.height)) )){
+      this.changeDirection(this.direction, "right");
+      //alert("point for player 1");
+      document.getElementById("player1").innerHTML = parseInt(document.getElementById("player1").innerHTML) + 1;
+      this.restart();
+    } else {
+      this.changeDirection(this.direction, "right");
+    }
+  }
+
+
+
+  //Border collide
+  /*
   if (this.top <=0) {
     this.changeDirection(this.direction, "top");
   } else if (this.top >= (this.board.height - this.diameter)){
@@ -75,6 +112,7 @@ Ball.prototype.checkBorders = function(){
   } else if  (this.left>=(this.board.width - this.diameter)) {
     this.changeDirection(this.direction, "right");
   }
+  */
 };
 
 Ball.prototype.changeDirection = function(direction, borders){

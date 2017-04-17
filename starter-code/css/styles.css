@@ -1,6 +1,18 @@
 body {
   width: 90%;
   text-align: center;
+  font-family: Helvetica, Arial;
+  background-color: rgb(75,100,75)
+}
+
+button {
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid grey;
+  color: white;
+  background-color: orange;
+  font-size: x-large;
 }
 
 #board {
@@ -11,6 +23,7 @@ body {
   background-color: green;
   box-sizing: border-box;
   display: inline-block;
+  border: 2px solid black;
 }
 
 .paddle {
@@ -34,15 +47,19 @@ body {
 
 #net {
   position:absolute;
-  left:49%;
+  left:49.5%;
   height: 100%;
-  width: 2%;
-  background-color: white;
+  width: 1%;
+  background-color: rgba(200,200,100,0.5);
 
 }
 
 #ball {
-  background-color: white;
+  /*background-color: white;
+  background: linear-gradient(to bottom right, white, grey);
+  background: -moz-linear-gradient(to bottom right, white, grey);
+  background: -webkit-linear-gradient(to bottom right, white, grey);
+  */
   border-radius: 10px;
   position: absolute;
   top: 190px;
@@ -52,7 +69,21 @@ body {
   height: 20px;
 }
 
+#ball img{
+  width: 100%;
+  height: 100%;
+}
+
 .score span {
+  margin: 20px;
+  padding: 20px;
+  font-size: large;
+}
+.score > span {
+  color:white;
+}
+.score {
+  padding: 20px;
 }
 
 .left {
