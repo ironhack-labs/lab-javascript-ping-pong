@@ -14,6 +14,7 @@ function updateState() {
         board.locateBallAtCenter();
     }
     
+    renderScore();
     renderGame();
 }
 
@@ -26,6 +27,8 @@ function renderGame() {
 }
 
 function renderScore() {
+    $('.user').html(paddle1.scoredPoints);
+    $('.computer').html(paddle2.scoredPoints);
 }
 
 function renderBall() {
