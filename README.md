@@ -2,6 +2,8 @@
 
 # JS | Pong Game
 
+
+
 ## Learning Goals
 
 After this learning unit, you will be able to:
@@ -18,14 +20,12 @@ After this learning unit, you will be able to:
 
 ## Submission
 
-Upon completion, run the following commands:
-
+Upon completion, run the following commands
 ```
 $ git add .
 $ git commit -m "done"
 $ git push origin master
 ```
-
 Navigate to your repo and create a Pull Request -from your master branch to the original repository master branch.
 
 In the Pull request name, add your name and last names separated by a dash "-"
@@ -77,6 +77,7 @@ In the `index.js` file we will create the methods to receive user's input.
 ## The computer has to play
 
 Also, in the `index.js` we will create the method to make the computer play. The computer's paddle position should follow the ball at anytime to emulate intelligence.
+
 
 ## Summary
 
