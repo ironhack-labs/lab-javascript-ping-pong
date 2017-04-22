@@ -1,34 +1,94 @@
 body {
+  background-color: black;
 }
-
+h2{
+  color:white;
+}
+header{
+  color:white;
+}
+h1{
+  margin:1% 40% 1% 40%;
+}
 #board {
+  height: 450px;
+  margin-left: 20%;
+  width: 800px;
+  background-color: #000011;
+  border:1px  solid #CCC;
+  border-left: none;
+  border-right: none;
+  position: relative;
 }
 
 .paddle {
+
 }
 
 #paddle1 {
+  top:45%;
+  left:21%;
+     width: 10px;
+     height: 40px;
+     border: 3px solid #555;
+  background-color: #95BE69;
+  position: absolute;
+
 }
 
 #paddle2 {
+  top:45%;
+  right:19%;
+  width: 10px;
+  height: 40px;
+  border: 3px solid #555;
+  background-color: #8A2BE2;
+  position: absolute;
 }
 
 #net {
+  left:50%;
+  top:11.5%;
+  background-color: white;
+  width: 5px;
+  height: 440px;
+  border: 3px solid #555;
+  position: absolute;
 }
 
 #ball {
+  left:50%;
+  top:45%;
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
 }
+.controller{
+  clear:both;
 
+}
 .score span {
 }
 
 .left {
+top:33%;
+position:absolute;
 }
 
 .right {
+  top:33%;
+  right:5%;
+  position: absolute;
+
 }
 
 button {
+  left:48.4%;
+  position:absolute;
 }
 
 #winner {

@@ -8,12 +8,27 @@
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
   <title>Ping Pong Garden</title>
 </head>
+<header>
+  <h1>PONG  GAME</h1>
+</header>
 <body>
-
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
   <script type="text/javascript" src="js/paddle.js"></script>
   <script type="text/javascript" src="js/ball.js"></script>
   <script type="text/javascript" src="js/board.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
+  <div id="board"></div>
+    <div id="paddle1" class="paddle left"></div>
+    <div id="net"></div>
+    <div id="ball"></div>
+    <div id="paddle2" class="paddle right"></div>
+
+  <div class="controller">
+    <button id="start" type="button" name="button">START</button>
+    <h2 class="left">PLAYER1
+    <br><p>SCORE</p></h2>
+    <h2 class="right">PLAYER2<br><p>SCORE</p></h2>
+  </div>
+
 </body>
 </html>
