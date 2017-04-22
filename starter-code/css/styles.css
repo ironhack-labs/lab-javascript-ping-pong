@@ -1,22 +1,64 @@
 body {
+  font-family: 'Open Sans', sans-serif;
 }
 
 #board {
+  width: 900px;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  background-image: url("../img/board-background.jpg");
+}
+
+#scoreboard {
+  font-size: 36px;
+  display: inline;
+  margin-left: 200px;
+}
+
+#start {
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  width: 200px;
+  height: 40px;
+  background-color: #FF5D73;
+
+  border: 0px;
+  border-radius: 30px;
+  margin: 10px 5px 10px 100px;
 }
 
 .paddle {
+  width: 20px;
+  height: 100px;
+  position: absolute;
 }
 
 #paddle1 {
+  background-color: red;
+  top: 200px;
 }
 
 #paddle2 {
+  background-color: blue;
+  left: 880px;
+  top: 200px;
 }
 
 #net {
 }
 
 #ball {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: white;
+  border: 1px solid black;
+  border-radius: 100%;
+  left: 440px;
+  top: 230px;
+
 }
 
 .score span {
