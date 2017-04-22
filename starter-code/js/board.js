@@ -1,7 +1,11 @@
 function Board() {
+  this.canvas=[];
+  console.log()
 }
 
 Board.prototype.start = function(){
+  this.canvas=[];
+  this.canvas=
 };
 
 Board.prototype.checkGame = function(){
