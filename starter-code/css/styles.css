@@ -1,22 +1,56 @@
 body {
+  background-color: #1C2833;
 }
 
 #board {
-}
+  box-shadow:0px 0px 15px 15px grey;
+  position:relative;
+  margin:auto;
+  margin-top: 150px;
+  height:600px;
+  width: 1000px;
+  background-image: url("../img/board-background.jpg");
+  border-radius: 5%;
 
+
+}
 .paddle {
+  position:absolute;
+  height: 130px;
+  width:15px;
+
 }
 
 #paddle1 {
+  background-color: #AED6F1;
+  left: 2%;
+  top:250px
 }
 
 #paddle2 {
+  background-color: #F7DC6F;
+  top:250px;
+  right: 2%;
+
 }
 
-#net {
+#net{
+  position: absolute;
+  height:100%;
+  width: 5px;
+  background-color: white;
+  left:50%;
 }
 
 #ball {
+  position:absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #C0392B;
+  left:50vh;
+  /*left:50%;*/
+  top: 50%;
 }
 
 .score span {
@@ -29,6 +63,12 @@ body {
 }
 
 button {
+  position: relative;
+  margin-left: 47%;
+  margin-top: 5%;
+  height: 100px;
+  width: 100px;
+
 }
 
 #winner {
