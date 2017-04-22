@@ -1,41 +1,102 @@
 body {
+  background-color: #000000;
 }
 
 #board {
+  background-color: ForestGreen;
+  height: 600px;
+  width: 1000px;
+  margin: 50px;
 }
 
 .paddle {
+  height: 60px;
+  width: 10px;
+  position: absolute;
 }
 
 #paddle1 {
+  background-color: red;
+  left: 65px;
+  top:300px;
 }
 
 #paddle2 {
+  background-color: blue;
+  left: 1040px;
+  top:300px;
 }
 
 #net {
+  background-color: #FFFFFF;
+  height: inherit;
+  width: 5px;
+  position: absolute;
+  left: 548px;
 }
 
 #ball {
+  background-color: pink;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  left: 542px;
+  top: 325px;
+  border-radius: 50%;
+}
+
+.score{
+  display: inline-block;
+  height: 80px;
+  width: 50px;
+  position: absolute;
+  top: 100px;
 }
 
 .score span {
+  font-size: 78px;
+  font-weight: bold;
 }
 
 .left {
+  color: red;
+  left: 300px;
 }
 
 .right {
+  color: blue;
+  left: 770px;
 }
 
 button {
+  height: 40px;
+  width: 100px;
+  background-color: #DDDDDD;
+  margin-left: 490px;
+  display: inline-block;
 }
 
-#winner {
+#end-play{
+  background-color: white;
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  top: 200px;
+  left: 350px;
+  text-align: center;
+}
+
+#end-play p{
+  font-size: 50px;
+  font-weight: bold;
+}
+
+
+/*#winner {
 }
 
 #winner.hide {
-}
+}*/
 
 @-webkit-keyframes slide {
     100% { top: 20px; }
