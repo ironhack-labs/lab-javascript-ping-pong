@@ -12,6 +12,14 @@ function updateState(){
 }
 
 $(document).on('keydown', function(e){
+  switch (e.keyCode) {
+    case 38:
+      paddle1.moveUp();
+    break;
+    case 40:
+      paddle1.moveDown();
+    break;
+  }
 });
 
 function activatePaddle2() {

@@ -1,22 +1,60 @@
 body {
+  width: 100%;
+  height: 605px;
+  margin: 0;
+  padding: 0;
 }
 
 #board {
+  margin: 0;
+  background-image: url("../img/board-background.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border: 10px solid #000;
+  z-index: -1;
 }
 
 .paddle {
+  height: 155px;
+  width: 30px;
+  position: absolute;
+  z-index: 1;
 }
 
 #paddle1 {
+  background-color: #00d2ff;
+  left: 20px;
+  top: 40%;
 }
 
 #paddle2 {
+  background-color: #f7573c;
+  right: 20px;
+  top: 225px;
 }
 
 #net {
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  bottom: 5px;
+  left: 50.5%;
+  background-color: #fff;
+  z-index: 0;
+  border: 2px solid #000;
 }
 
 #ball {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #fcc55b;
+  border: 1px solid #000;
+  z-index: 1;
 }
 
 .score span {
