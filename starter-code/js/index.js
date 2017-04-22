@@ -9,15 +9,28 @@ $('#start').on('click', function(){
 });
 
 function updateState(){
+
 }
 
 $(document).on('keydown', function(e){
+  switch(e.keyCode){
+      case 38://up
+        $("#paddle1").css("top","-=10");
+
+      break;
+      case 40://down
+        $("#paddle1").css("top","+=10");
+
+      break;
+  }
 });
 
 function activatePaddle2() {
+  
 }
 
 function renderGame(){
+
 }
 
 function renderScore(){
