@@ -1,34 +1,82 @@
 body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #6B3292;
 }
 
 #board {
+  position: relative;
+  box-sizing: border-box;
+  margin: auto;
+  margin-top: 50px;
+  width: 900px;
+  height: 500px;
+  background-image: url("../img/board-background.jpg");
+  border: solid 5px white;
+
 }
 
 .paddle {
+  border-radius: 3px;
+  height: 100px;
+  width: 20px;
+  position: absolute;
 }
 
 #paddle1 {
+  background-color: orange;
+  left: 3%;
+  top: 200px;
 }
 
 #paddle2 {
+  background-color: red;
+  right: 3%;
+  top: 200px;
 }
 
 #net {
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  width: 10px;
+
 }
 
 #ball {
+  background-color: white;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
 }
 
-.score span {
+.score {
+  position: absolute;
+  left: 200px;
+  width: 500px;
+  height: 20%;
 }
 
 .left {
+  float: left;
+  font-size: 100px;
+  font-style: sans-serif;
+  color: orange;
 }
 
 .right {
+  float: right;
+  font-size: 100px;
+  font-style: sans-serif;
+  color: red;
 }
 
 button {
+  background-color: white;
+  position: absolute;
+  left: 48.25%;
+  bottom: 6%;
 }
 
 #winner {
