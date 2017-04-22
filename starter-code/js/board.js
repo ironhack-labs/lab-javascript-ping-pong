@@ -2,6 +2,8 @@ function Board() {
 }
 
 Board.prototype.start = function(){
+
+
 };
 
 Board.prototype.checkGame = function(){
