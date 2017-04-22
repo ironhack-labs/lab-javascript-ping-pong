@@ -1,22 +1,130 @@
+@font-face {
+    font-family: 'PingPong';
+    src: url('../font/PingPong.eot');
+    src: url('../font/PingPong.eot?#iefix') format('embedded-opentype'),
+        url('../font/PingPong.woff') format('woff'),
+        url('../font/PingPong.ttf') format('truetype'),
+        url('../font/PingPong.svg#PingPong') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
+    font-family: PingPong;
+    background-color: #008B00;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.score-wrapper {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.computer {
+   margin-left: 90%;
+}
+
+.users {
+   margin-right: 90%;
+}
+
+.game-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding 0;
+    margin: 0 auto;
+    width: 1000px;
+    height: 600px;
+    transform: translate(-50%, -50%);
 }
 
 #board {
+    width: 100%;
+    height: 100%;
+    background-color: #00C900;
+    border: solid 6px #B9E5B9;
+    box-sizing: border-box;
 }
 
 .paddle {
+    position: absolute;
+    width: 16px;
+    height: 80px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border: solid 1px #004A00;
 }
 
 #paddle1 {
+    top: 260px;
+    left: 30px;
+    background-color: #E52500;
 }
 
 #paddle2 {
+    top: 260px;
+    right: 30px;
+    background-color: #0071B7;
+}
+
+#left-semi-circle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100px;
+    height: 200px;
+    border: solid 6px #B9E5B9;
+    border-top-right-radius: 110px;
+    border-bottom-right-radius: 110px;
+    transform: translate(0, -50%);
+}
+
+#right-semi-circle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100px;
+    height: 200px;
+    border: solid 6px #B9E5B9;
+    border-top-left-radius: 110px;
+    border-bottom-left-radius: 110px;
+    transform: translate(0, -50%);
+}
+
+#central-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border: solid 6px #B9E5B9;
+     border-radius: 110px;
+    -moz-border-radius: 110px;
+    -webkit-border-radius: 110px;
+    transform: translate(-50%, -50%);
 }
 
 #net {
+    position: absolute;
+    width: 6px;
+    height: 588px;
+    left: 497px;
+    background-color: #B9E5B9;
 }
 
 #ball {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    background-color: #FFFFFF;
+    /*border: solid 2px #004A00;*/
 }
 
 .score span {

@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
-  <title>Ping Pong Garden</title>
-</head>
-<body>
-
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-  <script type="text/javascript" src="js/paddle.js"></script>
-  <script type="text/javascript" src="js/ball.js"></script>
-  <script type="text/javascript" src="js/board.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+        <title>Ping Pong Garden</title>
+    </head>
+    <body id="body">
+        <div class="score-wrapper">
+            <h1>Score</h1>
+            <h1><span class="user">0</span><span class="computer">0</span></h1>
+        </div>
+        <div class="game-wrapper">
+            <div class="board" id="board">
+                <div id="left-semi-circle"></div>
+                <div id="central-circle"></div>
+                <div id="right-semi-circle"></div>
+                <div class="paddle" id="paddle1"></div>
+                <div class="paddle" id="paddle2"></div>
+                <div id="net"></div>
+            </div>
+            <div id="ball"></div>
+        </div>
+        <script type="text/javascript" src="lib/jquery-3.2.1/jquery-3.2.1.js"></script>
+        <script type="text/javascript" src="js/paddle.js"></script>
+        <script type="text/javascript" src="js/ball.js"></script>
+        <script type="text/javascript" src="js/board.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
 </html>
