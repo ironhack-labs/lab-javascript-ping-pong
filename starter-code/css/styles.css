@@ -1,34 +1,106 @@
 body {
+    background-color: darkslategray;
 }
 
 #board {
+    background-image: url("../img/board-background.jpg");
+    background-size: 1000px;
+    border: 5px solid white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px black;
+    height: 550px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    top: 20px;
+    width: 1000px;
+
+
 }
 
 .paddle {
+    border-radius: 6px;
+    height: 130px;
+    position: absolute;
+    width: 17px;
 }
 
 #paddle1 {
+    background-color: blue;
+    left: 15px;
+    top: 250px;
 }
 
 #paddle2 {
+    background-color: red;
+    right: 15px;
+    top: 250px;
+
 }
 
 #net {
+    background-color: white;
+    height: 550px;
+    left: 53%;
+    margin: -30px;
+    position: relative;
+    width: 8px;
+
+
+
 }
 
 #ball {
+    background-color: yellow;
+    border-radius: 50%;
+    height: 30px;
+    left: 550px;
+    position: relative;
+    top: 300px;
+    width: 30px;
+    z-index: 9999;
+
 }
 
-.score span {
-}
+.score ul li {
+    display: inline-block;
+    font-family: "Helvetica", sans-serif;
+    font-size: 100px;
+    font-weight: bolder;
+    left: 200px;
+    list-style-type: none;
+    padding-left: 70px;
+    position: absolute;
+    top: 80px;
 
-.left {
 }
 
 .right {
+    color: red;
+    margin-left: 400px;
+    margin-top: -80px;
+
+}
+
+.left {
+    color: blue;
+    margin-right: 0px;
+    margin-top: -80px;
+
 }
 
 button {
+    background-color: white;
+    border-radius: 5px;
+    bottom: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 30px;
+    left: 47%;
+    padding: 0 10px 0 10px;
+    position: absolute;
+    width: 92px;
+
 }
 
 #winner {
