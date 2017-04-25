@@ -9,6 +9,21 @@
   <title>Ping Pong Garden</title>
 </head>
 <body>
+  <div class="controls">
+    <button id="start">Start</button>
+    <div class="score">
+      <span class="players">Player 1:<span id="player1"></span></span>
+      <span class="players">Player 2:<span id="player2"></span></span>
+    </div>
+  </div>
+  <div id="board">
+    <div class="paddle" id="paddle1">
+    </div>
+    <div id="net"></div>
+    <div class="paddle" id="paddle2">
+    </div>
+    <div id="ball"><img src="img/ball.png" alt=""></div>
+  </div>
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
   <script type="text/javascript" src="js/paddle.js"></script>

@@ -1,25 +1,90 @@
 body {
+  width: 90%;
+  text-align: center;
+  font-family: Helvetica, Arial;
+  background-color: rgb(75,100,75)
+}
+
+button {
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid grey;
+  color: white;
+  background-color: orange;
+  font-size: x-large;
 }
 
 #board {
+  position: relative;
+  background-image: url(./../img/board-background.jpg);
+  width: 800px;
+  height: 400px;
+  background-color: green;
+  box-sizing: border-box;
+  display: inline-block;
+  border: 2px solid black;
 }
 
 .paddle {
+  position: absolute;
+  width: 18px;
+  height: 38px;
+  border-radius: 3px;
+  border: 2px solid black;
+  top: 300px;
 }
 
 #paddle1 {
+  left:20px;
+  background-color: rgba(235, 80, 102, 0.7);
 }
 
 #paddle2 {
+  left:760px;
+  background-color: rgba(86, 117, 195, 0.7);;
 }
 
 #net {
+  position:absolute;
+  left:49.5%;
+  height: 100%;
+  width: 1%;
+  background-color: rgba(200,200,100,0.5);
+
 }
 
 #ball {
+  /*background-color: white;
+  background: linear-gradient(to bottom right, white, grey);
+  background: -moz-linear-gradient(to bottom right, white, grey);
+  background: -webkit-linear-gradient(to bottom right, white, grey);
+  */
+  border-radius: 10px;
+  position: absolute;
+  top: 190px;
+  left: 390px;
+  background-image: url(./../img/ball.png);
+  width: 20px;
+  height: 20px;
+}
+
+#ball img{
+  width: 100%;
+  height: 100%;
 }
 
 .score span {
+  margin: 20px;
+  padding: 20px;
+  font-size: large;
+  color:white;
+}
+.score > span {
+
+}
+.score {
+  padding: 20px;
 }
 
 .left {
