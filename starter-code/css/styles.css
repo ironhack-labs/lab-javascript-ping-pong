@@ -37,12 +37,12 @@ button {
 
 #paddle1 {
   left:20px;
-  background-color: red;
+  background-color: rgba(235, 80, 102, 0.7);
 }
 
 #paddle2 {
   left:760px;
-  background-color: blue;
+  background-color: rgba(86, 117, 195, 0.7);;
 }
 
 #net {
@@ -78,9 +78,10 @@ button {
   margin: 20px;
   padding: 20px;
   font-size: large;
+  color:white;
 }
 .score > span {
-  color:white;
+
 }
 .score {
   padding: 20px;
