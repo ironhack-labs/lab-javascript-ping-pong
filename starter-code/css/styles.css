@@ -1,46 +1,63 @@
-body {
-}
+body {}
 
 #board {
+  text-align: center;
+  width: 800px;
+  height: 500px;
+  background-color: black;
+  border: 5px solid green;
+  margin: auto;
+  position: absolute;
 }
 
-.paddle {
+h1 {
+  text-align: center;
+  color: green;
 }
+
+.paddle {}
 
 #paddle1 {
+  width: 10px;
+  height: 50px;
+  background-color: green;
+  position: absolute;
+  left: 0px;
+
 }
 
 #paddle2 {
+  width: 10px;
+  height: 50px;
+  background-color: green;
+  position: absolute;
+  right: 0px;
 }
 
-#net {
-}
+#net {}
 
-#ball {
-}
+#ball {}
 
-.score span {
-}
+.score span {}
 
-.left {
-}
+.left {}
 
-.right {
-}
+.right {}
 
-button {
-}
+button {}
 
-#winner {
-}
+#winner {}
 
-#winner.hide {
-}
+#winner.hide {}
 
 @-webkit-keyframes slide {
-    100% { top: 20px; }
+  100% {
+    top: 20px;
+  }
 }
 
 @keyframes slide {
-    100% { top: 20px; }
+  100% {
+    top: 20px;
+  }
 }
