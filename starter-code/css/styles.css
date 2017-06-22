@@ -42,7 +42,7 @@ section {
 
 #net {
   background: white;
-  height: 90vh;
+  height: 700px;
   width: 1vw;
   position: absolute;
   display: inline-block;
@@ -53,7 +53,7 @@ section {
   background: white;
   border: 1px solid black;
   border-radius: 50px;
-  height: 3vh;
+  height: 4vh;
   width: 3vw;
   top: 350px;
   left: 460px;

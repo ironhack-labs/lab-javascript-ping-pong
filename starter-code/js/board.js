@@ -1,7 +1,7 @@
 function Board() {
   this.paddle1 = new Paddle();
   this.paddle2 = paddle2;
-  //this.ball = ball;
+  this.ball = new Ball();
 }
 
 Board.prototype.start = function(){

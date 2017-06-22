@@ -21,7 +21,7 @@ Paddle.prototype.up = function(){
 
 Paddle.prototype.down = function(){
   var x = $('#paddle1').position().top;
-  if(x < 400){
+  if(x < 650){
     $('#paddle1').css({top: x -= 5});
   } else {
     return;
