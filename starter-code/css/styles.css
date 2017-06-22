@@ -1,22 +1,62 @@
 body {
+  background: url('../img/board-background.jpg');
+}
+
+section {
+  padding-left: 10%;
+  padding-top: 2%;
+  position: relative;
 }
 
 #board {
+  position: absolute;
+  background: darkgreen;
+  width: 900px;
+  height: 700px;
+  border: 1px solid darkgreen;
+  border-radius: 20px;
+  margin: 0 auto;
+  text-align: center;
+  top: 50%;
 }
 
 .paddle {
+  position: absolute;
+  height: 150px;
+  width: 2vw;
+  border: 1px solid darkred;
+  border-radius: 20px;
 }
 
 #paddle1 {
+  background: red;
+  top: 200px;
+
 }
 
 #paddle2 {
+  background: blue;
+  margin-left: 97%;
+  top: 200px;
 }
 
 #net {
+  background: white;
+  height: 90vh;
+  width: 1vw;
+  position: absolute;
+  display: inline-block;
 }
 
 #ball {
+  position: absolute;
+  background: white;
+  border: 1px solid black;
+  border-radius: 50px;
+  height: 3vh;
+  width: 3vw;
+  top: 350px;
+  left: 460px;
 }
 
 .score span {
