@@ -17,6 +17,12 @@ h1 {
   color: green;
 }
 
+button {
+  height: 50px;
+  width: 100px;
+  text-align: center;
+}
+
 .paddle {}
 
 #paddle1 {
