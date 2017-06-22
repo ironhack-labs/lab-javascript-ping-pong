@@ -1,46 +1,74 @@
-body {
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
-#board {
+.container {
+  margin: 20px;
+  text-align: center;
 }
+
+.container-game {
+  border: 1px solid red;
+  margin: 0 auto;
+  width: 900px;
+  height: 459px;
+}
+
+#board {}
 
 .paddle {
+  /*position: absolute;*/
+  position: relative;
+  height: 180px;
+  width: 14px;
+  top: 0;
+  background: #000;
 }
 
-#paddle1 {
-}
+#paddle-1 {}
 
-#paddle2 {
-}
+#paddle-2 {}
 
-#net {
-}
+#net {}
 
 #ball {
+  width: 20px;
+  height: 20px;
+  background: red;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  position:relative;
+  left: 70px;
+  top: 259px;
 }
 
-.score span {
-}
+.score span {}
 
 .left {
+  left: 0;
 }
 
 .right {
+  top: 0;
+  float: right;
 }
 
-button {
-}
+button {}
 
-#winner {
-}
+#winner {}
 
-#winner.hide {
-}
+#winner.hide {}
 
 @-webkit-keyframes slide {
-    100% { top: 20px; }
+  100% {
+    top: 20px;
+  }
 }
 
 @keyframes slide {
-    100% { top: 20px; }
+  100% {
+    top: 20px;
+  }
 }

@@ -1,7 +1,11 @@
-function Board() {
+function Board(paddle1,paddle2) {
+  this.paddle1 = paddle1;
+  this.paddle2 = paddle2;
+  this.ball = false;
 }
 
 Board.prototype.start = function(){
+    this.ball = false;
 };
 
 Board.prototype.checkGame = function(){
