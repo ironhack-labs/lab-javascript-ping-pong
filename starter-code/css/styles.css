@@ -1,46 +1,78 @@
 body {
+  background-color: white;
 }
 
 #board {
+  width:900px;
+  height: 600px;
+  margin: auto;
+  text-align: center;
+  background-color: green;
+
 }
 
 .paddle {
+
 }
 
 #paddle1 {
+  background: #9B003A;
+  width: 10px;
+  height: 70px;
+  position: absolute;
+  margin-right: 13px;
+  margin-top: 250px;
+
 }
 
 #paddle2 {
+  background: #1362D6;
+  width: 10px;
+  height: 70px;
+  position: absolute;
+  margin-left:69%;
+  margin-top: 250px;
+
 }
 
 #net {
+  background: white;
+  height: 700px;
+  width: 10px;
+  text-align: center;
+  float: left;
+  margin-left: 50%;
 }
 
 #ball {
+  width: 30px;
+  height: 30px;
+  background: white;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
 }
 
-.score span {
-}
+.score span {}
 
-.left {
-}
+.left {}
 
-.right {
-}
+.right {}
 
-button {
-}
+button {}
 
-#winner {
-}
+#winner {}
 
-#winner.hide {
-}
+#winner.hide {}
 
 @-webkit-keyframes slide {
-    100% { top: 20px; }
+  100% {
+    top: 20px;
+  }
 }
 
 @keyframes slide {
-    100% { top: 20px; }
+  100% {
+    top: 20px;
+  }
 }
