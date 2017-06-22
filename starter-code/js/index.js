@@ -13,15 +13,21 @@ function updateState(){
 
 $(document).on('keydown', function(e){
   var x = $("#paddle2").position().top;
-
   console.log(x);
   if (e.keyCode == 38) {
+    if (x <= 0) {
+      return;
+    }
     $("#paddle2").css({
-      top: x -= 5
+        top: x -= 20
     });
   } else if (e.keyCode == 40) {
+    if (x >= 440) {
+      return;
+    }
+
     $("#paddle2").css({
-      top: x += 5
+      top: x += 20
     });
   }
 });
