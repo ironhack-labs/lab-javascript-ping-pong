@@ -12,11 +12,14 @@ Ball.prototype.randomDirection = function() {
 };
 
 Ball.prototype.move = function(){
-  if (this.directionX === "left") { this.pointX = this.pointX - 1; }
-  else { this.pointX = this.pointX + 1; }
+  var velocity = 2;
+  console.log(this.pointX, this.pointY);
+  if (this.directionX === "left") { this.pointX = this.pointX - velocity ; }
 
-  if (this.directionY === "top") { this.pointY = this.pointY + 1; }
-  else { this.pointY = this.pointY - 1; }
+  else { this.pointX = this.pointX + velocity; }
+
+  if (this.directionY === "top") { this.pointY = this.pointY + velocity; }
+  else { this.pointY = this.pointY - velocity; }
 
   if (this.pointX === 0)   { this.directionX = "right"; }
   if (this.pointX === 800) { this.directionX = "left"; }
@@ -24,7 +27,6 @@ Ball.prototype.move = function(){
   if (this.pointY === 0)   { this.directionY = "top"; }
 
   $("#ball").css({left: this.pointX, top: this.pointY});
-  setInterval(this.move.bind(this), 300);
 };
 
 Ball.prototype.pointScored = function(){

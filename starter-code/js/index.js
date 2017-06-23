@@ -4,7 +4,9 @@ var ball = new Ball(300, 300, null, null);
 $('#start').on('click', function(){
   console.log("hola");
   board.start();
-  setInterval(ball.move(), 1);
+  setInterval(function(){
+    ball.move();
+  }, 40);
   activatePaddle2();
   // var game = setInterval(updateState, intervalTime);
   renderGame();
