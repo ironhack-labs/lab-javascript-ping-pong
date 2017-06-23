@@ -11,13 +11,12 @@ $('#start').on('click', function(){
 function updateState(){
 }
 
-$(document).on('keydown', function(e){
-});
 
 function activatePaddle2() {
 }
 
 function renderGame(){
+
 }
 
 function renderScore(){
