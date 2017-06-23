@@ -14,7 +14,7 @@ $(document).keydown(function(event) {
     //move down
     if (x < 350) {
       $("#paddle-user").css({
-        top: x += 5
+        top: x += 10
       });
     }
   } else if (event.keyCode === 38) {
@@ -25,10 +25,33 @@ $(document).keydown(function(event) {
       });
     } else {
       $("#paddle-user").css({
-        top: x -= 5
+        top: x -= 10
       });
     }
   }
 });
 
-// document.addEventListener(“keydown”,moveListener)
+
+//borrar esta seccion cuando termines las pruebas manuales ya que esto se tendra que controlar de forma automática
+$(document).keydown(function(event) {
+  y = $("#paddle-computer").position().top;
+  if (event.keyCode === 40) {
+    //move down
+    if (x < 350) {
+      $("#paddle-computer").css({
+        top: x += 5
+      });
+    }
+  } else if (event.keyCode === 38) {
+    //move up
+    if (x < 5) {
+      $("#paddle-computer").css({
+        top: x
+      });
+    } else {
+      $("#paddle-computer").css({
+        top: x -= 5
+      });
+    }
+  }
+});
