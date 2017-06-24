@@ -1,34 +1,112 @@
 body {
 }
 
-#board {
+.container-fluid {
+  height:;
+  position: relative;
+  padding: 0px;
+  height: 800px;
+  background-color: DarkSlateGray;
+  padding-top: 20px;
+
 }
+
+.box {
+  background-color: DarkGreen;
+  height: 710px;
+  width: 1410px;
+  padding: 0px;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 20px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.net {
+  width: 10px;
+  height: 710px;
+  position: absolute;
+  top: 0px;
+  left: 700px;
+  background-color: Azure;
+  z-index: 6;
+}
+
 
 .paddle {
+  width: 30px;
+  height: 110px;
 }
 
-#paddle1 {
+.paddle1 {
+    background-color: red;
+    position: absolute;
+    top: 1%;
+    left: 10px;
+
 }
 
-#paddle2 {
+.paddle2 {
+    background-color: blue;
+    position: absolute;
+    top: 42.75%;
+    right: 10px;
+
 }
 
-#net {
+.ball {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  background-color: Azure;
+  z-index: 6;
+  border-radius: 12px;
 }
 
-#ball {
+.score1 {
+  float: left;
+  height: 60px;
+  width: 100px;
+  background-color: DarkSlateGray;
+  margin-left: 200px;
+  color: red;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.score2 {
+  float: left;
+  height: 60px;
+  width: 100px;
+  background-color: DarkSlateGray;
+  color: blue;
+  font-size: 3em;
+  font-weight: bold;
+  margin-left: 390px;
+}
+
+.start {
+ float: left;
+ height: 60px;
+ width: 100px;
+ border-color: Azure;
+ color: DarkGreen;
+ margin-left: 25.7%;
+ margin-top: 10px;
+}
+
+.buttonStart {
+  background-color:  Azure;
+  color: DarkGreen;
+  font-weight: bold;
+  height: 40px;
+  width: 80px;
 }
 
 .score span {
-}
-
-.left {
-}
-
-.right {
-}
-
-button {
 }
 
 #winner {
