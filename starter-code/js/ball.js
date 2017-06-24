@@ -48,12 +48,14 @@ Ball.prototype.move = function(x) {
           a = 1;
 
         }
-        if (x > 1900 && a == 0) {
+        if (x > 2050 && a == 0) {
           a = 3;
 
         }
-        if (x > p2x && x > p2x - 10 && y < p2y && y < p2y + 100) {
-          a = 3;
+        if (x < p2x && x > p2x - 10 && y < p2y && y < p2y + 100) {
+          a = 3
+          console.log("right2");
+
         }
 
 
@@ -78,9 +80,9 @@ Ball.prototype.move = function(x) {
         }
         p2x = $("#paddle2").position().left;
         p2y = $("#paddle2").position().top;
-        x = $("#ball").position().left;
 
-        if (x > 1900 && a == 1) {
+
+        if (x > 2050 && a == 1) {
           a = 2;
 
         }
@@ -88,8 +90,10 @@ Ball.prototype.move = function(x) {
           a = 0;
 
         }
-        if (x < p2x && x > p2x + 10 && y > p2y && y < p2y + 100) {
+        if (x < p2x && x > p2x - 10 && y < p2y && y < p2y + 150) {
           a = 2;
+          console.log("right1");
+
         }
 
 
@@ -123,12 +127,12 @@ Ball.prototype.move = function(x) {
           a = 1;
 
         }
-        if (x < p1x && x < p1x + 10 && y > p1y && y < p1y + 100) {
+        if (x < p1x && x < p1x -20 && y > p1y && y < p1y + 150) {
           a = 1;
         }
         break;
       case 3:
-        console.log(x);
+
 
         // x = $("#ball").position().left;
         // y = $("#ball").position().top;
