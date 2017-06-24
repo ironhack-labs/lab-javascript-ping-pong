@@ -1,30 +1,79 @@
 var board = new Board();
+var paddle1 = new Paddle();
+var paddle2 = new Paddle();
+var ball = new Ball(150, 200); // top 50 left 200;
 
 
-$('#start').on('click', function(){
-  board.start();
-  activatePaddle2();
-  var game = setInterval(updateState, intervalTime);
-  renderGame();
+
+var containerTop = $('.container-game').position().top;
+var containerHeight = $('.container-game').innerHeight();
+
+$('#start').on('click', function() {
+  initPositionBall();
+  ball.move(1); // Init direction is 1;
 });
 
-function updateState(){
+function initPositionBall() {
+  $('#ball').css({
+    top: ball.initPosition.top,
+    left: ball.initPosition.left,
+    display: 'block'
+  });
 }
 
-$(document).on('keydown', function(e){
-});
-
-function activatePaddle2() {
+// Calculate max position top of board
+function maxTop() {
+  var pos = $('#paddle-1').position();
+  if (pos.top <= containerTop) {
+    return;
+  } else {
+    return paddle1.up();
+  }
 }
 
-function renderGame(){
+// Calculate max position bottom of board
+function maxBottom() {
+  var pos = $('#paddle-1').position();
+  if (pos.top >= 337) {
+    return;
+  } else {
+    return paddle1.down();
+  }
 }
 
-function renderScore(){
+// Listener to move paddle
+function moveListeners(event) {
+  var keys = [38, 40];
+  var pixels;
+  var paddle = $('#paddle-1');
+
+  if (keys.indexOf(event.keyCode) < 0)
+    return;
+
+  switch (event.keyCode) {
+
+    case 38:
+      pixels = maxTop();
+      var newPos = paddle.css('top', pixels + 'px').position();
+      console.log(newPos);
+      break;
+
+    case 40:
+      pixels = maxBottom();
+      newPos = paddle.css('top', pixels + 'px').position();
+      console.log(newPos);
+      break;
+  }
 }
 
-function renderBall(){
-}
+$(document).on('keydown', moveListeners);
 
-function renderPaddle(){
-}
+function activatePaddle2() {}
+
+function renderGame() {}
+
+function renderScore() {}
+
+function renderBall() {}
+
+function renderPaddle() {}
