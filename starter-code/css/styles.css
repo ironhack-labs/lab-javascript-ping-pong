@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: black;
 }
 
 #board {
@@ -8,6 +8,8 @@ body {
   margin: auto;
   text-align: center;
   background-color: green;
+  position: absolute;
+  margin-left: 10%;
 
 }
 
@@ -30,7 +32,7 @@ body {
   width: 10px;
   height: 70px;
   position: absolute;
-  margin-left:69%;
+  margin-left:99%;
   margin-top: 250px;
 
 }
@@ -45,12 +47,13 @@ body {
 }
 
 #ball {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background: white;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
+  position: absolute;
 }
 
 .score span {}
