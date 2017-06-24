@@ -36,12 +36,18 @@ Ball.prototype.move = function(direction, ballSpeed) {
             top: yPosition += that.ballSpeed,
             left: xPosition += that.ballSpeed
           });
-          $('#paddle2').css({top: yPosition});
+          if(yPosition < 550){
+            $('#paddle2').css({top: yPosition});
+          }
         } else if (xPosition > 860) {
-          $('#paddle2').css({top: yPosition});
+          if(yPosition < 550){
+            $('#paddle2').css({top: yPosition});
+          }
           that.direction = 3;
         } else {
-          $('#paddle2').css({top: yPosition});
+          if(yPosition < 550){
+            $('#paddle2').css({top: yPosition});
+          }
           that.direction = 1;
         }
         break;
