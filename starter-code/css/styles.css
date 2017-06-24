@@ -1,4 +1,100 @@
 body {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section > h1 {
+  font-weight: 900;
+  text-align: center;
+  font-size: 36px;
+}
+
+.board {
+  border: 5px solid #000;
+  height: 600px;
+  width: 900px;
+  background-color: #006647;
+  border-radius: 10px;
+  position: relative;
+}
+
+.white-stripe {
+  position: absolute;
+  width: 5px;
+  height: 600px;
+  background-color: white;
+  margin-left: 450px;
+}
+
+/*.section1 {
+  height: 500px;
+  width: 450px;
+  float: left;
+  margin-right: 10px;
+  border-radius: 10px 0 0 10px;;
+}
+
+.section2 {
+  background-color: #006647;
+  height: 500px;
+  width: 450px;
+  float: left;
+  border-radius: 0 10px 10px 0;
+}*/
+
+/*.score1 > h2 {
+  text-align: center;
+  margin-left: 10px;
+  color: #fff;
+}
+
+.score2 > h2 {
+  text-align: center;
+  margin-right: 10px;
+  color: #fff;
+}*/
+
+.paddle-red {
+  width: 20px;
+  height: 90px;
+  background-color: #A20032;
+  position: absolute;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+}
+
+.paddle-blue {
+  width: 20px;
+  height: 90px;
+  background-color: #3C1BE2;
+  float: right;
+  border-radius: 5px;
+  top: 200px;
+  left: 880px;
+  position: absolute;
+}
+
+.button-box {
+  text-align: center;
+}
+
+.button {
+  padding: 10px 12px;
+  border: 0;
+  text-transform: uppercase;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.ball {
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  border-radius: 50px;
+  position: absolute;
+  left: 435px;
+  top: 300px;
 }
 
 #board {
