@@ -2,7 +2,7 @@
 function Board() {
   this.paddle1 = new Paddle(10, 300);
   this.paddle2 = new Paddle(1400, 300);
-  this.ball = new Ball(698.5, 0, this.paddle1, this.paddle2);
+  this.ball = new Ball(698.5, 0, 5, this.paddle1, this.paddle2);
   this.width = 1410;
   this.player1Score = 0;
   this.player2Score = 0;
@@ -11,6 +11,8 @@ function Board() {
 
 Board.prototype.start = function(){
   this.ballMoving = setInterval(this.ball.move.bind(this), 100);)
+  
+
   /*var check = this.checkGame();
   if (!check){
     this.stop();

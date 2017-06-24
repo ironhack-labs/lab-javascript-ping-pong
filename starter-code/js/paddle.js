@@ -9,6 +9,7 @@ Paddle.prototype.restart = function(){
 
 Paddle.prototype.hitBall = function(ball_x){
  ball_x = - ball_x;
+ return ball_x;
 };
 
 Paddle.prototype.followBall = function(ball_y){

@@ -38,5 +38,5 @@ Ball.prototype.winner = function(){
 Ball.prototype.restart = function(){
   this.position.x = 50;
   this.y = 0;
-  this.direction = this.randomDirection();
+  this.randomDirection();
 };
