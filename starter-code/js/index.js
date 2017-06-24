@@ -20,14 +20,14 @@ $(document).on('keydown', function(e) {
       return;
     }
     $("#paddle1").css({
-      top: x -= 15
+      top: x -= 35
     });
   } else if (event.keyCode === 40) {
     if (x >= 293) {
       return;
     }
     $("#paddle1").css({
-      top: x += 15
+      top: x += 25
     });
   }
   var y = $("#paddle2").position().top;
@@ -36,14 +36,14 @@ $(document).on('keydown', function(e) {
       return;
     }
     $("#paddle2").css({
-      top: y -= 15
+      top: y -= 35
     });
   } else if (event.keyCode === 88) {
     if (y >= 293) {
       return;
     }
     $("#paddle2").css({
-      top: y += 15
+      top: y += 35
     });
   }
 });
