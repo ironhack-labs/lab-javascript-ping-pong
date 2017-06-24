@@ -1,46 +1,81 @@
 body {
+  background-color: black;
 }
 
 #board {
+  width:900px;
+  height: 600px;
+  margin: auto;
+  text-align: center;
+  background-color: green;
+  position: absolute;
+  margin-left: 10%;
+
 }
 
 .paddle {
+
 }
 
 #paddle1 {
+  background: #9B003A;
+  width: 10px;
+  height: 70px;
+  position: absolute;
+  margin-right: 13px;
+  margin-top: 250px;
+
 }
 
 #paddle2 {
+  background: #1362D6;
+  width: 10px;
+  height: 70px;
+  position: absolute;
+  margin-left:99%;
+  margin-top: 250px;
+
 }
 
 #net {
+  background: white;
+  height: 600px;
+  width: 10px;
+  text-align: center;
+  float: left;
+  margin-left: 50%;
 }
 
 #ball {
+  width: 20px;
+  height: 20px;
+  background: white;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  position: absolute;
 }
 
-.score span {
-}
+.score span {}
 
-.left {
-}
+.left {}
 
-.right {
-}
+.right {}
 
-button {
-}
+button {}
 
-#winner {
-}
+#winner {}
 
-#winner.hide {
-}
+#winner.hide {}
 
 @-webkit-keyframes slide {
-    100% { top: 20px; }
+  100% {
+    top: 20px;
+  }
 }
 
 @keyframes slide {
-    100% { top: 20px; }
+  100% {
+    top: 20px;
+  }
 }
