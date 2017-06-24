@@ -1,20 +1,30 @@
 var board = new Board();
 var paddle1 = new Paddle();
 var paddle2 = new Paddle();
-var ball = new Ball();
+var ball = new Ball(150, 200); // top 50 left 200;
 
+
+
+var containerTop = $('.container-game').position().top;
+var containerHeight = $('.container-game').innerHeight();
 
 $('#start').on('click', function() {
-  board.start();
-  activatePaddle2();
-  var game = setInterval(updateState, intervalTime);
-  renderGame();
+  initPositionBall();
+  ball.move(1); // Init direction is 1;
 });
+
+function initPositionBall() {
+  $('#ball').css({
+    top: ball.initPosition.top,
+    left: ball.initPosition.left,
+    display: 'block'
+  });
+}
 
 // Calculate max position top of board
 function maxTop() {
   var pos = $('#paddle-1').position();
-  if (pos.top <= 62) {
+  if (pos.top <= containerTop) {
     return;
   } else {
     return paddle1.up();
