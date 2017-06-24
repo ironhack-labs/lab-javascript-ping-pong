@@ -6,30 +6,34 @@ function Board() {
   this.width = 1410;
   this.player1Score = 0;
   this.player2Score = 0;
+  this.ballMoving = 0;
 }
 
 Board.prototype.start = function(){
-  var ballMoving = setInterval(this.ball.move.bind(this), 100);)
-  var check = this.checkGame();
+  this.ballMoving = setInterval(this.ball.move.bind(this), 100);)
+  /*var check = this.checkGame();
   if (!check){
-    this.stop(ballMoving);
-  }
+    this.stop();
+  }*/
 };
 
 Board.prototype.checkGame = function(){
-
-
+  if (this.ball.x <= 0){
+    this.player2Score += 15;
+  } else if (this.ball.x >= (this.width - 25)){
+    this.player1Score += 15;
 };
 
-Board.prototype.stop = function(ballMoving){
-  clearInterval(ballMoving);
+Board.prototype.stop = function(){
+  var that = this;
+  clearInterval(that.ballMoving);
   };
 
 Board.prototype.restart = function(){
-  this.paddle1.y = 300;
-  this.paddle2.y = 300;
-  this.ball.position.x = 698.5;
-  this.ball.position.y = 0;
+  this.paddle1.restart()
+  this.paddle2.restart()
+  this.ball.restart()
+  this.ballMoving = setInterval(this.ball.move.bind(this), 100);)
 };
 
 Board.prototype.gameOver = function(player){

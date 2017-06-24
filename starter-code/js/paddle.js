@@ -4,8 +4,20 @@ function Paddle(x,y) {
 }
 
 Paddle.prototype.restart = function(){
-  this.x = 310;
+  this.y = 300;
 };
 
-Paddle.prototype.hitBall = function(ball_y){
+Paddle.prototype.hitBall = function(ball_x){
+ ball_x = - ball_x;
 };
+
+Paddle.prototype.followBall = function(ball_y){
+  if(ball_y < this.y){
+    this.y --
+  } else if (ball_y > this.y){
+    this.y ++
+  }
+};
+
+
+}
