@@ -1,11 +1,12 @@
 var board = new Board();
-
+var direction, ballSpeed;
 
 $('#start').on('click', function() {
-  board.start();
-  activatePaddle2();
-  var game = setInterval(updateState, intervalTime);
-  renderGame();
+  direction = Math.floor((Math.random() * 4)+1);
+  ballSpeed = 10;
+  board.start(direction, ballSpeed);
+  //var game = setInterval(updateState, intervalTime);
+  //renderGame();
 });
 
 function updateState() {}
@@ -21,7 +22,7 @@ $(document).on('keydown', function(e) {
   }
 });
 
-function activatePaddle2() {}
+function activatePaddle2(direction, ballSpeed) {}
 
 function renderGame() {}
 

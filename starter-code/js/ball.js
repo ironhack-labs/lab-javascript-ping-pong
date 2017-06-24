@@ -1,26 +1,28 @@
-function Ball(x, y, paddle1, paddle2) {
-  this.direction = 1;
+function Ball(direction, ballSpeed) {
+  this.direction = direction;
+  this.ballSpeed = ballSpeed;
 }
 
 Ball.prototype.randomDirection = function() {};
 
-Ball.prototype.move = function(direction) {
+Ball.prototype.move = function(direction, ballSpeed) {
   this.direction = direction;
+  this.ballSpeed = ballSpeed;
+
   var that = this,
-    ballSpeed = 5,
     yPosition = $('#ball').position().top,
     xPosition = $('#ball').position().left,
     yPaddle = $('#paddle1').position().top,
-    xPaddle = $('#paddle1').position().left;
+    xPaddle = $('#paddle1').position().left,
+    paddle2 = $('#paddle2').position().top;
 
   var intervalId = setInterval(function() {
     switch (that.direction) {
       case 1:
-        if (yPosition > 2 && xPosition < 850) {
-          console.log('case 1');
+        if (yPosition > 2 && xPosition < 860) {
           $('#ball').css({
-            top: yPosition -= ballSpeed,
-            left: xPosition += ballSpeed
+            top: yPosition -= that.ballSpeed,
+            left: xPosition += that.ballSpeed
           });
         } else if (xPosition > 850) {
           that.direction = 4;
@@ -29,24 +31,25 @@ Ball.prototype.move = function(direction) {
         }
         break;
       case 2:
-        if(yPosition < 650 && xPosition < 850){
-          console.log('case 2');
+        if (yPosition < 650 && xPosition < 860) {
           $('#ball').css({
-            top: yPosition += ballSpeed,
-            left: xPosition += ballSpeed
+            top: yPosition += that.ballSpeed,
+            left: xPosition += that.ballSpeed
           });
-        } else if (xPosition > 850) {
+          $('#paddle2').css({top: yPosition});
+        } else if (xPosition > 860) {
+          $('#paddle2').css({top: yPosition});
           that.direction = 3;
         } else {
-          that.direction = 4;
+          $('#paddle2').css({top: yPosition});
+          that.direction = 1;
         }
         break;
       case 3:
-        if(yPosition < 650 && xPosition > 2){
-          console.log('case 3');
+        if (yPosition < 650 && xPosition > 2) {
           $('#ball').css({
-            top: yPosition += ballSpeed,
-            left: xPosition -= ballSpeed
+            top: yPosition += that.ballSpeed,
+            left: xPosition -= that.ballSpeed
           });
         } else if (xPosition < 2) {
           that.direction = 1;
@@ -55,13 +58,12 @@ Ball.prototype.move = function(direction) {
         }
         break;
       case 4:
-        if(yPosition > 2 && xPosition > 2){
-          console.log('case 4');
+        if (yPosition > 2 && xPosition > 2) {
           $('#ball').css({
-            top: yPosition -= ballSpeed,
-            left: xPosition -= ballSpeed
+            top: yPosition -= that.ballSpeed,
+            left: xPosition -= that.ballSpeed
           });
-        } else if (xPosition < 2){
+        } else if (xPosition < 2) {
           that.direction = 1;
         } else {
           that.direction = 3;
