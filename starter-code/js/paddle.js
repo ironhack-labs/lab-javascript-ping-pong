@@ -6,6 +6,7 @@ Paddle.prototype.restart = function() {};
 
 Paddle.prototype.hitBall = function(ball_y) {};
 
+var speedPaddle = 15;
 
 //move user paddle and control border movements
 $(document).keydown(function(event) {
@@ -14,7 +15,7 @@ $(document).keydown(function(event) {
     //move down
     if (x < 350) {
       $("#paddle-user").css({
-        top: x += 10
+        top: x += speedPaddle
       });
     }
   } else if (event.keyCode === 38) {
@@ -25,21 +26,21 @@ $(document).keydown(function(event) {
       });
     } else {
       $("#paddle-user").css({
-        top: x -= 10
+        top: x -= speedPaddle
       });
     }
   }
-});
+
 
 
 //borrar esta seccion cuando termines las pruebas manuales ya que esto se tendra que controlar de forma automática
-$(document).keydown(function(event) {
+
   y = $("#paddle-computer").position().top;
   if (event.keyCode === 40) {
     //move down
     if (x < 350) {
       $("#paddle-computer").css({
-        top: x += 5
+        top: x += speedPaddle
       });
     }
   } else if (event.keyCode === 38) {
@@ -50,8 +51,9 @@ $(document).keydown(function(event) {
       });
     } else {
       $("#paddle-computer").css({
-        top: x -= 5
+        top: x -= speedPaddle
       });
     }
   }
+
 });

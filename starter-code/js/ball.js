@@ -2,6 +2,7 @@ function Ball(x, y, paddle1, paddle2) {
   this.direction = 1;
   this.x = x;
   this.y = y;
+
 }
 
 Ball.prototype.randomDirection = function() {
@@ -16,10 +17,18 @@ Ball.prototype.randomDirection = function() {
   // });
 };
 
+// var ballVerticalPosition = $("#ball").position().top;
+// var ballHorizontalPosition = $("#ball").position().left;
+// var humanPaddleVerticalPosition = $("#paddle-user").position().top;
+// var humanPaddleHorizontalPosition = $("#paddle-user").position().left;
+// var computerPaddleVerticalPosition = $("#paddle-computer").position().top;
+// var computerPaddleHorizontalPosition = $("#paddle-computer").position().left;
+
+
 Ball.prototype.move = function(direction) {
   this.direction = direction;
   var that = this;
-  var ballSpeed = 3;
+  var ballSpeed = 6;
   var intervalId = setInterval(function() {
     var ballVerticalPosition = $("#ball").position().top;
     var ballHorizontalPosition = $("#ball").position().left;
@@ -30,9 +39,9 @@ Ball.prototype.move = function(direction) {
     switch (that.direction) {
       case 1:
         // console.log(humanPaddleVerticalPosition, humanPaddleHorizontalPosition, ballVerticalPosition, ballHorizontalPosition);
-        if ((humanPaddleVerticalPosition < ballVerticalPosition) && (ballVerticalPosition < humanPaddleVerticalPosition + 50) && (ballHorizontalPosition < humanPaddleHorizontalPosition) && (ballHorizontalPosition > humanPaddleHorizontalPosition - 10)) {
+        if ((humanPaddleVerticalPosition < ballVerticalPosition) && (ballVerticalPosition < humanPaddleVerticalPosition + 50) && (ballHorizontalPosition < humanPaddleHorizontalPosition) && (ballHorizontalPosition > humanPaddleHorizontalPosition - 30)) {
           that.direction = 4;
-          // console.log("El paddle! cambio a direccion 4");
+          console.log("El paddle! cambio a direccion 4");
         }
         if (ballVerticalPosition > 5 && ballHorizontalPosition < 895) {
           $("#ball").css({
@@ -49,8 +58,9 @@ Ball.prototype.move = function(direction) {
         }
         break;
       case 2:
-        if ((humanPaddleVerticalPosition < ballVerticalPosition) && (ballVerticalPosition < humanPaddleVerticalPosition + 50) && (ballHorizontalPosition < humanPaddleHorizontalPosition) && (ballHorizontalPosition > humanPaddleHorizontalPosition - 10)) {
+        if ((humanPaddleVerticalPosition < ballVerticalPosition) && (ballVerticalPosition < humanPaddleVerticalPosition + 50) && (ballHorizontalPosition < humanPaddleHorizontalPosition) && (ballHorizontalPosition > humanPaddleHorizontalPosition - 30)) {
           that.direction = 3;
+          console.log("El paddle! cambio a direccion 3");
         }
         if (ballVerticalPosition < 395 && ballHorizontalPosition < 895) {
           $("#ball").css({
@@ -102,8 +112,12 @@ Ball.prototype.move = function(direction) {
   }, 30);
 };
 
-Ball.prototype.pointScored = function() {};
+Ball.prototype.hitPaddle = function() {
 
+
+};
+
+Ball.prototype.pointScored = function() {};
 // returns winner paddle or false
 Ball.prototype.winner = function() {};
 

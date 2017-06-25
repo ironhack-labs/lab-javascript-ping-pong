@@ -1,6 +1,6 @@
 var board = new Board();
 var ball = new Ball();
-// var userPaddle = new Paddle(0,0)
+var userPaddle = new Paddle(0,0);
 
 $('#start').on('click', function(){
   board.start();
