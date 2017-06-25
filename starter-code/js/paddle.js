@@ -1,4 +1,6 @@
 function Paddle(x,y) {
+  this.posx = x;
+  this.posy = y;
 }
 Paddle.prototype.restart = function(){
 };

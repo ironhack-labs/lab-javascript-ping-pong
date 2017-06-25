@@ -1,40 +1,89 @@
 body {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-#board {
+section > h1 {
+  font-weight: 900;
+  text-align: center;
+  font-size: 36px;
+  margin: 10px;
 }
 
-.paddle {
+.board {
+  border: 5px solid #000;
+  height: 450px;
+  width: 900px;
+  background-color: #006647;
+  border-radius: 10px;
+  position: relative;
 }
 
-#paddle1 {
+.white-stripe {
+  position: absolute;
+  width: 5px;
+  height: 450px;
+  background-color: white;
+  margin-left: 450px;
 }
 
-#paddle2 {
+.score1, .score2 {
+  display: inline-block;
 }
 
-#net {
+.score1 > h2 {
+  text-align: left;
 }
 
-#ball {
+.score2 > h2 {
+  margin-left: 550px;
 }
 
-.score span {
+.paddle-red {
+  width: 20px;
+  height: 90px;
+  background-color: #A20032;
+  position: absolute;
+  border-radius: 5px;
+  top: 0;
+  left: 10px;
 }
 
-.left {
+.paddle-blue {
+  width: 20px;
+  height: 90px;
+  background-color: #3C1BE2;
+  float: right;
+  border-radius: 5px;
+  top: 200px;
+  left: 870px;
+  position: absolute;
 }
 
-.right {
+.button-box {
+  text-align: center;
 }
 
-button {
+.button {
+  background-color: #000;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 30px;
+  cursor: pointer;
 }
 
-#winner {
-}
-
-#winner.hide {
+.ball {
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  border-radius: 50px;
+  position: absolute;
+  left: 435px;
+  top: 250px;
 }
 
 @-webkit-keyframes slide {
