@@ -38,25 +38,24 @@ Ball.prototype.move = function(x) {
           top: y
         });
         //console.log($("#ball").position().left);
-        if (--i) {
+        if (true) {
           setTimeout(k, 20);
         }
         p2x = $("#paddle2").position().left;
         p2y = $("#paddle2").position().top;
         // x = $("#ball").position().left;
-        if (y == 0 && a == 0) {
+        if (y < 1 && a == 0) {
           a = 1;
 
         }
-        if (x > 2050 && a == 0) {
+        if (x > 1470 && a == 0) {
           a = 3;
 
         }
-        if (x < p2x && x > p2x - 10 && y < p2y && y < p2y + 100) {
-          a = 3
-          console.log("right2");
-
+        if (x > p2x - 10 && x < p2x + 1 && y > p2y && y < p2y + 150) {
+          a = 3;
         }
+
 
 
         // } while (a==true);
@@ -75,26 +74,25 @@ Ball.prototype.move = function(x) {
           top: y
         });
         //console.log($("#ball").position().left);
-        if (--i) {
+        if (true) {
           setTimeout(k, 20);
         }
         p2x = $("#paddle2").position().left;
         p2y = $("#paddle2").position().top;
 
 
-        if (x > 2050 && a == 1) {
+        if (x > 1470 && a == 1) {
           a = 2;
 
         }
-        if (y > 470 && a == 1) {
+        if (y > 810 && a == 1) {
           a = 0;
 
         }
-        if (x < p2x && x > p2x - 10 && y < p2y && y < p2y + 150) {
+        if (x > p2x - 10 && x < p2x + 1 && y > p2y && y < p2y + 150) {
           a = 2;
-          console.log("right1");
-
         }
+
 
 
 
@@ -112,22 +110,22 @@ Ball.prototype.move = function(x) {
           top: y
         });
         //console.log($("#ball").position().left);
-        if (--i) {
+        if (true) {
           setTimeout(k, 20);
         }
         p1x = $("#paddle1").position().left;
         p1y = $("#paddle1").position().top;
 
 
-        if (y > 470 && a == 2) {
+        if (y > 810 && a == 2) {
           a = 3;
 
         }
-        if (x < 450 && a == 2) {
+        if (x < 1 && a == 2) {
           a = 1;
 
         }
-        if (x < p1x && x < p1x -20 && y > p1y && y < p1y + 150) {
+        if (x > p1x + 25 && x < p1x + 35 && y > p1y && y < p1y + 150) {
           a = 1;
         }
         break;
@@ -145,7 +143,7 @@ Ball.prototype.move = function(x) {
           top: y
         });
         //console.log($("#ball").position().left);
-        if (--i) {
+        if (true) {
           setTimeout(k, 20);
         }
         p1x = $("#paddle1").position().left;
@@ -155,14 +153,14 @@ Ball.prototype.move = function(x) {
         //   a = 1;
         //
         // }
-        if (x < 450 && a == 3) {
+        if (x < 1 && a == 3) {
           a = 0;
 
         }
         if (y == 0 && a == 3) {
           a = 2;
         }
-        if (x < p1x && x < p1x + 10 && y > p1y && y < p1y + 100) {
+        if (x > p1x + 25 && x < p1x + 35 && y > p1y && y < p1y + 150) {
           a = 0;
         }
 
