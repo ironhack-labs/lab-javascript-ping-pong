@@ -1,9 +1,12 @@
 var board = new Board();
-
+var paddle = new Paddle();
+var ball = new Ball();
 
 $('#start').on('click', function(){
   board.start();
-  activatePaddle2();
+  paddle.movePaddleSecond();
+  paddle.movePaddle();
+  ball.move();
   var game = setInterval(updateState, intervalTime);
   renderGame();
 });
