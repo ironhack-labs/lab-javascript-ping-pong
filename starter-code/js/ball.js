@@ -25,14 +25,16 @@ Ball.prototype.move = function(direction, ballSpeed) {
             left: xPosition += that.ballSpeed
           });
         } else if (xPosition > 850) {
+          if(yPosition > 550){
+            $('#paddle2').css({top: yPosition});
+          }
           that.direction = 4;
         } else {
           that.direction = 2;
         }
         break;
       case 2:
-        if (yPosition < 650 && xPosition < 860) {
-          $('#ball').css({
+        if (yPosition < 650 && xPosition < 860) {          $('#ball').css({
             top: yPosition += that.ballSpeed,
             left: xPosition += that.ballSpeed
           });
@@ -53,25 +55,27 @@ Ball.prototype.move = function(direction, ballSpeed) {
         break;
       case 3:
         if (yPosition < 650 && xPosition > 2) {
+          console.log(xPosition,yPosition);
           $('#ball').css({
             top: yPosition += that.ballSpeed,
             left: xPosition -= that.ballSpeed
           });
         } else if (xPosition < 2) {
-          that.direction = 1;
-        } else {
+          that.direction = 2;
+        } else if(yPosition > 640){
           that.direction = 4;
         }
         break;
       case 4:
         if (yPosition > 2 && xPosition > 2) {
+          console.log(xPosition,yPosition);
           $('#ball').css({
             top: yPosition -= that.ballSpeed,
             left: xPosition -= that.ballSpeed
           });
         } else if (xPosition < 2) {
           that.direction = 1;
-        } else {
+        } else if(yPosition < 2){
           that.direction = 3;
         }
         break;

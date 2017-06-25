@@ -35,12 +35,12 @@ section {
 #paddle1 {
   background: red;
   top: 200px;
-
+  left: 50px;
 }
 
 #paddle2 {
   background: blue;
-  margin-left: 97%;
+  left: 850px;
   top: 200px;
 }
 
