@@ -1,3 +1,10 @@
+
+
+
+
+
+
+/*
 function Ball(x,y, paddle1, paddle2) {
   this.pointX = x;
   this.pointY = y;
@@ -12,7 +19,7 @@ Ball.prototype.randomDirection = function() {
 };
 
 Ball.prototype.move = function(){
-  var velocity = 2;
+  var velocity = 1;
   console.log(this.pointX, this.pointY);
   if (this.directionX === "left") { this.pointX = this.pointX - velocity ; }
 
@@ -38,3 +45,4 @@ Ball.prototype.winner = function(){
 
 Ball.prototype.restart = function(){
 };
+*/
