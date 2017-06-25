@@ -1,25 +1,95 @@
 body {
+  background: url('../img/board-background.jpg');
+}
+
+header {
+  float: left;
+}
+
+section {
+  position: relative;
+  padding-left: 10%;
+  padding-top: 2%;
 }
 
 #board {
+  position: absolute;
+  background: darkgreen;
+  width: 900px;
+  height: 700px;
+  border: 1px solid darkgreen;
+  border-radius: 20px;
+  margin: 0 auto;
+  text-align: center;
+  top: 50%;
 }
 
 .paddle {
+  position: absolute;
+  height: 150px;
+  width: 20px;
+  border: 1px solid darkred;
+  border-radius: 20px;
 }
 
 #paddle1 {
+  background: red;
+  top: 200px;
+  left: 50px;
 }
 
 #paddle2 {
+  background: blue;
+  left: 850px;
+  top: 200px;
 }
 
 #net {
+  background: white;
+  height: 700px;
+  width: 1vw;
+  position: absolute;
+  display: inline-block;
 }
 
 #ball {
+  position: absolute;
+  background: white;
+  border: 1px solid black;
+  border-radius: 50px;
+  height: 25px;
+  width: 25px;
+  top: 350px;
+  left: 460px;
 }
 
-.score span {
+button {
+  display: block;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  font-size: large;
+  border: 1px solid black;
+  border-radius: 10px;
+  top: 740px;
+  left: 480px;
+  position: absolute;
+}
+
+.score > span{
+  color: white;
+  text-transform: uppercase;
+  font-size: 100px;
+}
+
+.paddle1-score {
+  float: left;
+  padding-left: 200px;
+  margin-right: 0px;
+}
+
+.paddle2-score {
+  float: right;
+  padding-right: 200px;
 }
 
 .left {
