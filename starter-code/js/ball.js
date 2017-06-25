@@ -25,6 +25,9 @@ Ball.prototype.move = function(direction){
         console.log(verticalPosition, horizontalPosition);
       }
       else if(horizontalPosition > 850) {
+        if (verticalPosition > 370) {
+          $('.paddle-blue').css({top: verticalPosition});
+        }
         that.direction = 3;
       }
       else {
@@ -33,11 +36,19 @@ Ball.prototype.move = function(direction){
       break;
 
       case 1:
-      if (verticalPosition < 550 && horizontalPosition < 850) {
+      if (verticalPosition < 420 && horizontalPosition < 850) {
         $('.ball').css({left:horizontalPosition+=10, top:verticalPosition +=10});
         console.log(verticalPosition, horizontalPosition);
+
+      if (verticalPosition < 370) {
+        $('.paddle-blue').css({top: verticalPosition});
       }
+    }
+
       else if(horizontalPosition > 850) {
+        if (verticalPosition < 370) {
+          $('.paddle-blue').css({top: verticalPosition});
+        }
         that.direction = 2;
       }
       else {
@@ -46,7 +57,7 @@ Ball.prototype.move = function(direction){
       break;
 
       case 2:
-      if (verticalPosition < 550 && horizontalPosition > 2) {
+      if (verticalPosition < 420 && horizontalPosition > 2) {
         $('.ball').css({left:horizontalPosition-=10, top:verticalPosition +=10});
       }
       else if(horizontalPosition < 2) {
@@ -68,7 +79,6 @@ Ball.prototype.move = function(direction){
         that.direction = 2;
       }
       break;
-
     }
   }, 30);
 };

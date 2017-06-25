@@ -1,5 +1,6 @@
 var board = new Board();
 var ball = new Ball();
+var paddle = new Paddle();
 
 
 $('.button').on('click', function(){
@@ -24,7 +25,7 @@ $(document).on('keydown', function(e){
        }
        $('.paddle-red').css({top: x-=15});
      }else if(event.keyCode === 40){
-       if(x >= 490){
+       if(x >= 350){
          return;
        }
        $('.paddle-red').css({top: x+=15});
