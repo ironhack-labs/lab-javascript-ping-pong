@@ -1,4 +1,5 @@
 function Board() {
+  this.paddle1 = new Paddle();
 }
 
 Board.prototype.start = function(){
