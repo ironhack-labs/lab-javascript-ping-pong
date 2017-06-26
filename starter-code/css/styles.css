@@ -1,34 +1,106 @@
 body {
+  background-image: url("../img/board-background.jpg");
 }
 
 #board {
+  background-color: #66a3ff;
+  padding: 0;
+  margin-left: 115px;
+  margin-top: 25px;
+  box-sizing: border-box;
+  height: 755px;
+  width: 1450px;
+  border: 15px white solid;
+  position: absolute;
+  display: inline-block;
 }
 
 .paddle {
 }
 
-#paddle1 {
+#paddle-computer{
+  background-color: black;
+  float: left;
+  clear: left;
+  margin-left: 40px;
+  width: 20px;
+  height: 85px;
+  margin-top: 360px;
+  position: absolute;
+  display: inline-block;
+
 }
 
-#paddle2 {
+#paddle-user {
+  background-color: #991f00;
+  float: right;
+  margin-left: 640px;
+  width: 20px;
+  height: 85px;
+  margin-top: 360px;
+  display: inline-block;
+  position: absolute;
 }
 
 #net {
+  background-color: white;
+  height: 740px;
+  width: 30px;
+  padding: 0;
+  margin-left: 690px;
+  box-sizing: border-box;
+  display: inline-block;
 }
 
 #ball {
+  width: 25px;
+  height: 25px;
+  border-radius: 12.5px;
+  position: absolute;
+  background-color: #ffb366;
+  border: 1px black solid;
+  display: inline-block;
 }
 
-.score span {
+.score {
+  background-color: inherit;
+  border-radius: 10px;
+  display: block;
+  font-size: 15px;
+  padding: 3px 8px;
+  font-weight: bold;
+
+}
+
+.left, .right{
+  border: 3px black solid;
+  background-color: white;
+  width: 15vw;
+  display: inline-block;
+  margin-left: 27vw;
 }
 
 .left {
+  border: 3px black solid;
+  background-color: white;
+  width: 15vw;
+  margin-left: 20vw;
 }
 
-.right {
+#score-computer, #computer-result{
+  display: inline-block;
 }
 
 button {
+  margin-top: 86vh;
+  padding: 4px;
+  border: 2px black solid;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 48vw;
+  width: 4vw;
+  font-size: 15px;
 }
 
 #winner {
