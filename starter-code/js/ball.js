@@ -195,4 +195,4 @@ Ball.prototype.pointScored = function() {};
 Ball.prototype.winner = function() {};
 
 Ball.prototype.restart = function() {};
-Ball.prototype.move();
+Ball.prototypemove();
