@@ -1,8 +1,6 @@
-function Ball(x,y, speed, paddle1, paddle2) {
-  this.position = {
-    this.x = x;
-    this.y = y;
-  };
+function Ball(x, y, speed, paddle1, paddle2) {
+  this.x = x;
+  this.y = y;
   this.randomDirection();
   this.speed = speed;
   this.paddle1 = paddle1;
@@ -10,24 +8,24 @@ function Ball(x,y, speed, paddle1, paddle2) {
 }
 
 Ball.prototype.randomDirection = function() {
-  this.direction.x = Math.random()) * 2  - 1;
-  this.direction.y = Math.random()) * 2  - 1;
+  this.directionX = Math.random() * 2  - 1;
+  this.directionY = Math.random() * 2  - 1;
 };
 
 Ball.prototype.move = function(){
-  this.position.x += (this.direction.x * speed);
-  this.position.y += (this.direction.y * speed);
-  if (this.position.y <=0 || this.position.y >= 685){
-    this.direction.y = -this.direction.y;
+  this.x += (this.directionX * this.speed);
+  this.y += (this.directionY * this.speed);
+  if (this.y <=0 || this.y >= 685){
+    this.y = -this.y;
   }
-  if ((this.position.x <= 40) && (Math.abs(this.position.y - paddle1.y)) ||
-      (this.position.x >= 1345) && (Math.abs(this.position.y - paddle2.y))) {
-    this.direction.x = -this.direction.x; //paddle.hitBall (se implementa aquí, por claridad)
+  if ((this.x <= 40) && (Math.abs(this.y - this.paddle1.y)) ||
+      (this.x >= 1345) && (Math.abs(this.y - this.paddle2.y))) {
+    this.x = -this.x; //paddle.hitBall (se implementa aquí, por claridad)
   }
 };
 
 Ball.prototype.pointScored = function(){
-  return (this.position.x < 20)? "Player1" : "Player2";
+  return (this.x < 20)? "Player1" : "Player2";
 };
 
 // returns winner paddle or false
@@ -36,7 +34,7 @@ Ball.prototype.winner = function(){
 };
 
 Ball.prototype.restart = function(){
-  this.position.x = 50;
+  this.x = 50;
   this.y = 0;
   this.randomDirection();
 };

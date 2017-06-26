@@ -14,11 +14,8 @@ Paddle.prototype.hitBall = function(ball_x){
 
 Paddle.prototype.followBall = function(ball_y){
   if(ball_y < this.y){
-    this.y --
+    this.y -=20
   } else if (ball_y > this.y){
-    this.y ++
+    this.y +=20
   }
 };
-
-
-}
