@@ -1,46 +1,102 @@
 body {
+
 }
 
 #board {
+  position: absolute;
+  left:10px;
+  right: 0px;
+  width: 1505px;
+  height: 840px;
+  background-color: white;
+  z-index: 1;
+  border: solid 2px black;
+  box-shadow: 0px 0px 20px black;
 }
 
 .paddle {
+  background-color: white;
+  width: 20px;
+  height: 150px;
+
 }
 
+#start {
+  position: absolute;
+  left: 650px;
+  top: 740px;
+  width: 200px;
+  height: 50px;
+  background-color: red;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  border: solid 2px black;
+  box-shadow: 0px 0px 20px black;
+}
+/*.text-start{
+  position: absolute;
+  left: 1200px;
+  top: 220px;
+  width: 200px;
+  z-index:1;
+
+}*/
+
 #paddle1 {
+  position: absolute;
+  left: 300px;
+  top: 520px;
+  background-color: black;
+  z-index: 2;
+  border: solid 2px blue;
+  box-shadow: 0px 0px 20px blue;
 }
 
 #paddle2 {
+  position: absolute;
+  left: 1100px;
+  top: 520px;
+  background-color: black;
+  z-index: 2;
+  border: solid 2px red;
+  box-shadow: 0px 0px 20px red;
 }
 
-#net {
-}
+#net {}
 
 #ball {
+  position: absolute;
+  left: 600px;
+  top: 180px;
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  border-radius: 40px;
+  border: solid 2px black;
+  box-shadow: 0px 0px 20px green;
 }
 
-.score span {
-}
+.score span {}
 
-.left {
-}
+.left {}
 
-.right {
-}
+.right {}
 
-button {
-}
+button {}
 
-#winner {
-}
+#winner {}
 
-#winner.hide {
-}
+#winner.hide {}
 
 @-webkit-keyframes slide {
-    100% { top: 20px; }
+  100% {
+    top: 20px;
+  }
 }
 
 @keyframes slide {
-    100% { top: 20px; }
+  100% {
+    top: 20px;
+  }
 }
