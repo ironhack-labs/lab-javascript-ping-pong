@@ -1,4 +1,6 @@
-function Board() {
+function Board(width, height) {
+	this.width = width
+	this.height = height
 }
 
 Board.prototype.start = function(){
