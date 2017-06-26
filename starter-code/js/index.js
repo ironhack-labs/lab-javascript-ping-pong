@@ -1,30 +1,42 @@
 var board = new Board();
+var ball = new Ball();
+var paddleUser = new PaddleUser();
+var board = new Board();
 
-
-$('#start').on('click', function(){
-  board.start();
-  activatePaddle2();
-  var game = setInterval(updateState, intervalTime);
-  renderGame();
-});
-
-function updateState(){
-}
-
-$(document).on('keydown', function(e){
-});
+function updateState() {}
 
 function activatePaddle2() {
-}
+  var x = $("#paddle-computer").position().top;
+  var interval2 = setInterval(function() {
+      $("#paddle-computer").css({
+          top: x = ball.x - 275
+        });
+      }, 30);
+  }
 
-function renderGame(){
-}
+  function renderGame() {
+    renderBall();
+    renderPaddle();
+  }
 
-function renderScore(){
-}
+  var score = 0;
 
-function renderBall(){
-}
+  function renderScore() {
+    score++;
+    $(".left > span").empty();
+    $("#computer-result").append(score);
+    renderGame();
+  }
 
-function renderPaddle(){
-}
+  function renderBall() {
+    ball.restart();
+    ball.move();
+    activatePaddle2();
+  }
+
+  function renderPaddle() {
+    paddleUser.restart();
+    paddleUser.userMovement();
+  }
+
+  renderGame();
