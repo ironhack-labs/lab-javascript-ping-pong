@@ -2,6 +2,11 @@ function Board() {
 }
 
 Board.prototype.start = function(){
+  Paddle();
+  
+
+
+
 };
 
 Board.prototype.checkGame = function(){

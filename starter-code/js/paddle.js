@@ -1,7 +1,8 @@
-function Paddle(x,y) {
+function Paddle(x, y) {
+
 }
-Paddle.prototype.restart = function(){
+Paddle.prototype.restart = function() {
+
 };
 
-Paddle.prototype.hitBall = function(ball_y){
-};
+Paddle.prototype.hitBall = function(ball_y) {};

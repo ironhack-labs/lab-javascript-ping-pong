@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,37 @@
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
   <title>Ping Pong Garden</title>
 </head>
+
 <body>
 
+  <div class="container">
+
+    <div id="scores">
+
+      <div class="score-left">Player 1 : <span id="score1">0</span></div>
+      <div class="score-right">Player 2 : <span id="score2">0</span></div>
+
+
+
+      <div class="c-button-start">
+        <button type="button" class="btn btn-start">Start</button>
+
+      </div>
+    </div>
+    <div id="board">
+      <div class="net">
+
+      </div>
+      <div id="paddle1" class="paddle"></div>
+      <div id="paddle2" class="paddle"></div>
+      <div id="ball"></div>
+    </div>
+  </div>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
   <script type="text/javascript" src="js/paddle.js"></script>
   <script type="text/javascript" src="js/ball.js"></script>
   <script type="text/javascript" src="js/board.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
 </body>
+
 </html>
