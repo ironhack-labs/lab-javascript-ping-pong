@@ -1,46 +1,114 @@
 body {
+  background: grey;
+}
+
+.c-button {
+  text-align: center;
 }
 
 #board {
+  background: lightblue;
+  width: 800px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  border: 8px solid white;
 }
 
 .paddle {
+  background: white;
+  left: 50px;
+  top: 160px;
+  position: absolute;
+  width: 20px;
+  height: 100px;
 }
 
 #paddle1 {
+  background-color: blue;
 }
 
 #paddle2 {
+  left: 730px;
+  background-color: red;
 }
 
-#net {
-}
+.btn-start {}
 
 #ball {
+  width: 40px;
+  height: 40px;
+  background-color: yellow;
+  border-radius: 50px;
+  position: absolute;
+  top: 180px;
+  left: 386px;
 }
 
-.score span {
+.net {
+  width: 10px;
+  height: 800px;
+  background-color: white;
+  left: 400px;
+  position: absolute;
 }
 
-.left {
+.btn {
+  padding: 10px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px #CF000F solid;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  margin: 40px 10px;
+  width: 150px;
 }
 
-.right {
+.pala {
+  background: white;
+  left: 50px;
+  top: 160px;
+  position: absolute;
+  width: 20px;
+  height: 100px;
+}
+.score-left{
+  color:blue;
+  width: 50%;
+  float: left;
+}
+.score-right{
+  color: red;
+  width: 50%;
+  float: right;
 }
 
-button {
+#scores {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
 }
 
-#winner {
-}
+button {}
 
-#winner.hide {
-}
+#winner {}
+
+#winner.hide {}
 
 @-webkit-keyframes slide {
-    100% { top: 20px; }
+  100% {
+    top: 20px;
+  }
 }
 
 @keyframes slide {
-    100% { top: 20px; }
+  100% {
+    top: 20px;
+  }
 }
