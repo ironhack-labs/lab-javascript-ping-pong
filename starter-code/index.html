@@ -4,12 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
   <title>Ping Pong Garden</title>
 </head>
 <body>
 
+<section id="scoreboard">
+  <div class="score"><div>Computer: <span id="comp-score">0</span></div></div>
+  <div class="score"><div>Human: <span id="player-score">0</span></div></div>
+</section>
+
+
+<section id="game-area">
+    <!-- computer paddle container -->
+    <div class="paddle-area" id="paddle-area-comp">
+      <div class="paddle" id="paddle-comp"></div>
+    </div>
+
+    <!-- playing area -->
+    <div id="board">
+      <div id="ball"></div>
+    </div>
+
+    <div id="button-container">
+      <div id="game-over">Game Over</div>
+      <div class="btn" id="start-button">START</div>
+    </div>
+
+    <!-- player paddle container -->
+    <div class="paddle-area" id="paddle-area-player">
+      <div class="paddle" id="paddle-player"></div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.4/lodash.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
   <script type="text/javascript" src="js/paddle.js"></script>
   <script type="text/javascript" src="js/ball.js"></script>
