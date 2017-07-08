@@ -4,10 +4,10 @@ function Ball() {
   this.diameter = parseInt($('#ball').css('height'));
 
   // ball has a position (x,y) on the board
-  this.position = { x : 0, y : 0 }
+  this.position = { x : 0, y : 0 };
 
   // ball has a direction vector [x,y]
-  this.direction = this.randomDirection();
+  this.direction = { x : 0, y : 0 };
 
   // set an step size for the movement of the ball, 1/100 of board
   this.step = 5; // in px
@@ -23,7 +23,7 @@ Ball.prototype.randomDirection = function() {
   var initAngle = _.random(-50,-50) * Math.PI / 180;
 
   // return a length one vector representing the direction of the ball
-  return { x: Math.cos(initAngle), y: Math.sin(initAngle) };
+  this.direction = { x: Math.cos(initAngle), y: Math.sin(initAngle) };
 
 };
 

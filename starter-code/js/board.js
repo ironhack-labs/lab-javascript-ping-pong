@@ -13,14 +13,18 @@ function Board() {
   // initiate scores
   this.playerScore = 0;
   this.computerScore = 0;
-  this.targetScore = 2;
+  this.targetScore = 3;
 
   // board has status
   this.keepGoing = true;
   this.keepChecking = true;
 
-  //toggle Game Over
-  $('#game-over').toggle();
+  //hide Game Over, hide ball
+  $('#game-over').hide();
+  $('#ball').hide()
+
+  //computer level by default
+  this.compLevel = 5
 
 }
 
@@ -28,12 +32,19 @@ function Board() {
 Board.prototype.start = function(){
 
     this.ball.reset();
-    $('#ball').show();
+    $('#ball').show(); $('.hide-during-play').hide();
     this.keepGoing = true; this.keepChecking = true;
     var that = this;
+    var moveCount = 0;
+    if ( $('#computer-level').val() !== '') this.compLevel = $('#computer-level').val();
+    if ( $('#points-to-win').val() !== '') this.targetScore = $('#points-to-win').val();
 
     var intervalId = setInterval( function () {
       that.ball.move(); //move ball in its current direction
+      moveCount += 1;
+      if (moveCount % (14 - that.compLevel) == 0) {
+        that.computerPaddle.updateCompPaddle(that.ball.position, that.width/10);
+      }
       if (that.keepChecking) that.checkGame(); //check for obstacles
       if (!that.keepGoing) {
         clearInterval(intervalId); //kill when keepGoing is done
@@ -68,12 +79,12 @@ Board.prototype.checkGame = function(){
 
       // otherwise it counts as a score for player
       else {
-        this.computerScore += 1; this.renderScore(); // give a point to computer
+        this.playerScore += 1; this.renderScore(); // give a point to computer
         this.keepChecking = false; // stop checking
         var that = this;
         setTimeout( function(){
           that.keepGoing = false;
-          that.ball.reset();
+          // that.ball.reset();
         }, 500);
       }
     }
@@ -94,7 +105,7 @@ Board.prototype.checkGame = function(){
         var that = this;
         setTimeout( function(){
           that.keepGoing = false;
-          that.ball.reset();
+          // that.ball.reset();
         }, 500);
       }
     }
@@ -106,7 +117,6 @@ Board.prototype.renderScore = function(){
   $('#comp-score').html(this.computerScore);
   $('#player-score').html(this.playerScore);
 };
-
 
 
 
@@ -122,8 +132,14 @@ Board.prototype.restart = function() {
 
 Board.prototype.gameOver = function(){
     $('#ball').toggle();
-    $('#game-over').toggle();
-    $('#start-button').toggle();
+    if (this.computerScore < this.playerScore) {
+      $('#game-over').html('Human Wins');
+    } else {
+      $('#game-over').html('Game Over');
+    }
+    $('#game-over').show();
+    $('.hide-during-play').show();
+    $('#start-button').show();
     $('#start-button').html('PLAY AGAIN');
 };
 

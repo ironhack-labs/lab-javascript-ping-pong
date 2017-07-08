@@ -21,9 +21,9 @@ function Paddle(height, type) {
   this.type = type; // type : 'player' or 'comp'
 
   if (this.type == 'comp') {
-    this.pixFromLeft = 2 + parseInt($('#paddle-area-' + this.type).css('width')) - parseInt($('#paddle-' + this.type).css('width'));
-    this.height = this.boardHeight; // computer is unbeatable
-    this.y = 0;
+    this.pixFromLeft = parseInt($('#paddle-area-' + this.type).css('width')) - parseInt($('#paddle-' + this.type).css('width'));
+    // this.height = this.boardHeight; // computer is unbeatable
+    // this.y = 0;
   }
 
   this.render();
@@ -79,6 +79,15 @@ Paddle.prototype.render = function() {
   }
 }
 
+////////////////////////// Changes direction of the ball when hitting an obstacle
+Paddle.prototype.updateCompPaddle = function (ballPosition, cutOff) {
+
+  var compActive = ballPosition.x < cutOff;
+
+  if (this.y > ballPosition.y && compActive) this.move('down');
+  if (this.y < ballPosition.y && compActive) this.move('up');
+  this.render();
+};
 
 
 Paddle.prototype.restart = function(){

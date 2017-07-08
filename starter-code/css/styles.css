@@ -9,10 +9,10 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  height: 80px;
+  height: 100px;
   padding: 0;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .score {
@@ -72,9 +72,9 @@ body {
   width: 30%;
 }
 
-#paddle-comp {
+/*#paddle-comp {
   height: 100%;
-}
+}*/
 
 #button-container {
   position: absolute;
@@ -100,9 +100,6 @@ body {
   margin: auto;
 }
 
-#net {
-}
-
 #ball {
   position: absolute;
   width: 32px;
@@ -111,23 +108,43 @@ body {
   background-color: cadetblue;
 }
 
-.score span {
+#settings-area {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 100px;
 }
 
-.left {
+.settings-box {
+  font-family: Fascinate;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45%;
+  border-top: dotted 0.8px rgba(255, 255, 255, 0.9);
 }
 
-.right {
+.settings-box h3 {
+  font-size: 1.3rem;
+  margin: 10px 0 10px;
 }
 
-button {
+.settings-box input {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  font-family: Fascinate;
+  text-align: center;
+  background-color: rgb(0,0,0);
+  color: rgba(255, 255, 255, 0.9);
+  border: dotted 0.8px rgba(255, 255, 255, 0.9);
+  width: 120px;
 }
 
-#winner {
-}
-
-#winner.hide {
-}
 
 @-webkit-keyframes slide {
     100% { top: 20px; }

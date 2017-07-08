@@ -12,7 +12,7 @@
 <body>
 
 <section id="scoreboard">
-  <div class="score"><div>Computer: <span id="comp-score">0</span></div></div>
+  <div class="score"><div>Computer:    <span id="comp-score">0</span></div></div>
   <div class="score"><div>Human: <span id="player-score">0</span></div></div>
 </section>
 
@@ -29,7 +29,7 @@
     </div>
 
     <div id="button-container">
-      <div id="game-over">Game Over</div>
+      <div id="game-over"></div>
       <div class="btn" id="start-button">START</div>
     </div>
 
@@ -37,7 +37,22 @@
     <div class="paddle-area" id="paddle-area-player">
       <div class="paddle" id="paddle-player"></div>
     </div>
-  </section>
+</section>
+
+<section id="settings-area">
+  <div id="level" class="settings-box">
+    <h3 class="hide-during-play"> Set computer level here</h3>
+    <input class="hide-during-play" id="computer-level" placeholder="1 - 10"></input>
+  </div>
+  <div id="instructions" class="">
+
+  </div>
+  <div id="best-to" class="settings-box">
+    <h3 class="hide-during-play">Number of points to win</h3>
+    <input class="hide-during-play" id="points-to-win" placeholder="Your call!"></input>
+  </div>
+</div>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.4/lodash.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
