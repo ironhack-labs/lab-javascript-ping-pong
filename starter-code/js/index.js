@@ -15,8 +15,10 @@
 
 $(document).ready(function() {
   var paddle = new Paddle()
+  var ball = new Ball()
   var keys = {}
   setInterval(checkControl, 30)
+  setInterval(movPelota, 50)
 
   $(document).keydown(function(e) {
     keys[e.keyCode] = true;
@@ -32,5 +34,11 @@ $(document).ready(function() {
       x = paddle.moveDown(parseInt($('#paddle1').css('top')))
 
     $('#paddle1').css('top', x + 'px')
+  }
+
+  function movPelota () {
+    if($('board').css('top', 440)){
+      ball.abajoDerecha()
+    }
   }
 })

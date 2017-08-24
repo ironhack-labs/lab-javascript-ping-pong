@@ -19,17 +19,24 @@
 // }
 
 function Ball () {
-  this.posX = x
-  this.posY = y
-  this.dirX = x
-  this.dirY = y
-  this.velocity = vel
+  this.posX = 0
+  this.posY = 0
+  // this.dirX = x
+  // this.dirY = y
+  // this.velocity = vel
 }
 
 Ball.prototype.direction = function () {
-  
+
 }
 
 Ball.prototype.move = function () {
 
-};
+}
+
+Ball.prototype.abajoDerecha = function () {
+  this.x += 8
+  this.y += 8
+  $('#ball').css('left', this.x + 'px')
+  $('#ball').css('top', this.y + 'px')
+}
