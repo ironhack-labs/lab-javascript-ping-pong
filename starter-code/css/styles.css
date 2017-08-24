@@ -2,12 +2,23 @@ body {
 }
 
 #board {
+  width: 1000px;
+  height: 500px;
+  background-image: url("../img/board-background.jpg");
+
 }
 
 .paddle {
+  width: 30px;
+  height: 80px;
 }
 
 #paddle1 {
+  background-color: blue;
+  left: 30px;
+  top: 20px;
+  position: absolute;
+
 }
 
 #paddle2 {
@@ -17,6 +28,13 @@ body {
 }
 
 #ball {
+  background: white;
+  height: 10px;
+  width: 10px;
+  top: 245px;
+  left: 495px;
+  position: absolute;
+  border-radius: 25px;
 }
 
 .score span {
