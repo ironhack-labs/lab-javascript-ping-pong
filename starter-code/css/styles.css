@@ -1,22 +1,49 @@
 body {
+  margin:0;
 }
 
+.container{
+  height: 600px;
+  width: 800px;
+  text-align: center;
+}
 #board {
+  background-color: green;
+  height: 100%;
+  width: 100%;
 }
 
 .paddle {
 }
 
 #paddle1 {
+  background-color: #283998;
+  height: 200px;
+  width: 30px;
+  top:50px;
+  left: 50px;
+  position: absolute;
+  border-radius: 10px;
 }
 
 #paddle2 {
 }
 
 #net {
+  width: 5px;
+  height: 100%;
+  margin: 0 auto;
+  background: #ccc;
 }
 
 #ball {
+  background: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  position:absolute;
+  top: calc(300px - 25px);
+  left: calc(400px - 25px);
 }
 
 .score span {
@@ -29,6 +56,8 @@ body {
 }
 
 button {
+  padding: 5px 20px;
+  font-size: 2rem;
 }
 
 #winner {
