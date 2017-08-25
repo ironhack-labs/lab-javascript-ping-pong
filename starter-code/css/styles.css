@@ -1,13 +1,27 @@
 body {
+  margin: 0;
 }
 
 #board {
+  width: 45%;
+  height: 600px;
+  border: 2px solid white;
+  background-color: green;
+  float: left;
 }
 
 .paddle {
+  width: 2%;
+  height: 150px;
+  border: 2px solid white;
+  position: absolute;
 }
 
 #paddle1 {
+  background-color: red;
+  top: 0;
+  bottom: 0;
+  /*margin-left: 5px;*/
 }
 
 #paddle2 {
@@ -17,6 +31,13 @@ body {
 }
 
 #ball {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  border: 1px solid red;
 }
 
 .score span {
