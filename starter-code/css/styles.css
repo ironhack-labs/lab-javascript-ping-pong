@@ -1,46 +1,41 @@
-body {
+body{
+  padding: 0;
+  margin:0;
+  height: 500px;
+  width:1000px;
+  border: 2px solid black;
 }
 
-#board {
+#container{
+  height: 500px;
+  width:1000px;
+  background-color: rgb(19, 163, 93);
+
 }
 
-.paddle {
+.derecha{
+  width:50%;
+  height: 100%;
+  float:left;
+  border-right:2px solid white ;
 }
 
-#paddle1 {
+#raqueta{
+  width:20px;
+  height:100px;
+  background-color: white;
+  position: absolute;
+  top:4px;
+  left:4px;
 }
 
-#paddle2 {
-}
+#pelota{
+  width:20px;
+  height:20px;
+  background-color: blue;
+  position: absolute;
+  top:4px;
+  left:4px;
+  border-radius: 25px;
 
-#net {
-}
-
-#ball {
-}
-
-.score span {
-}
-
-.left {
-}
-
-.right {
-}
-
-button {
-}
-
-#winner {
-}
-
-#winner.hide {
-}
-
-@-webkit-keyframes slide {
-    100% { top: 20px; }
-}
-
-@keyframes slide {
-    100% { top: 20px; }
 }
