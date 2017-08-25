@@ -53,7 +53,7 @@ Ball.prototype.checkCollision = function(){
   }
 
   // Ball hit on paddle2
-  if(this.y == 540  && board.paddle2.x < this.x && board.paddle2.x + 80 > this.x){
+  if(this.y == 550  && board.paddle2.x < this.x && board.paddle2.x + 80 > this.x){
     switch (this.direction) {
       case 'NE': this.direction = 'NW'; break;
       case 'SE': this.direction = 'SW'; break;
