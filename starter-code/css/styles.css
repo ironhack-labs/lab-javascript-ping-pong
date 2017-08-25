@@ -1,46 +1,88 @@
 body {
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  text-align: center;
+  height: 900px;
+  background: black;
 }
 
 #board {
+  background: #0a5c47;
+  margin: 20px;
+  height: 800px;
+  border-radius: 14px;
+  font-size: 5em;
 }
 
 .paddle {
+  background: grey;
+  position: absolute;
+  height: 150px;
+  width: 30px;
+  border-radius: 10px;
+  margin: 0 20px;
+
 }
 
 #paddle1 {
+  background: #b30000;
+  top: 450px;
+  left: 50;
 }
 
 #paddle2 {
+  float: right;
+  background: #0000b3;
+  top: 350px;
+  right: 35px;
 }
 
 #net {
+  background: grey;
+  position: absolute;
+  top: 20px;
+  left: 49.5%;
+  height: 800px;
+  width: 1%;
 }
 
 #ball {
+  background: white;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 100px;
+  top: 480px;
+  border-radius: 15px;
 }
 
-.score span {
+.score span {}
+
+.right {
+  color: #0000b3;
 }
 
 .left {
+  color: #b30000;
 }
 
-.right {
-}
+button {}
 
-button {
-}
+#winner {}
 
-#winner {
-}
-
-#winner.hide {
-}
+#winner.hide {}
 
 @-webkit-keyframes slide {
-    100% { top: 20px; }
+  100% {
+    top: 20px;
+  }
 }
 
 @keyframes slide {
-    100% { top: 20px; }
+  100% {
+    top: 20px;
+  }
 }
