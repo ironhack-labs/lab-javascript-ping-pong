@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <link rel='stylesheet' type='text/css' href='css/styles.css'>
+  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Nunito+Sans'>
   <title>Ping Pong Garden</title>
 </head>
 <body>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-  <script type="text/javascript" src="js/paddle.js"></script>
-  <script type="text/javascript" src="js/ball.js"></script>
-  <script type="text/javascript" src="js/board.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
+  <div id='board'>
+    <div id='paddle1' class='paddle'></div>
+    <div id='paddle2' class='paddle'></div>
+    <div id='ball'></div>
+  </div>
+
+  <button id='start'>START</button>
+  <div id="score1" class="score"><span>0</span></div>
+  <div id="score2" class="score"><span>0</span></div>
+
+  <div id="keys1">Q up, A down</div>
+  <div id="keys2">Arrow up, Arrow down</div>
+
+  <script type='text/javascript' src='https://code.jquery.com/jquery-3.1.1.slim.min.js'></script>
+  <script type='text/javascript' src='js/paddle.js'></script>
+  <script type='text/javascript' src='js/ball.js'></script>
+  <script type='text/javascript' src='js/board.js'></script>
+  <script type='text/javascript' src='js/index.js'></script>
 </body>
 </html>

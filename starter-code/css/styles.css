@@ -2,24 +2,64 @@ body {
 }
 
 #board {
+  height: 400px;
+  width: 600px;
+  top: 100px;
+  left: 100px;
+  background-color: #25bf18;
+  position: relative;
 }
 
 .paddle {
+  height: 80px;
+  width: 20px;
+  position: absolute;
 }
 
 #paddle1 {
+  background-color: #c30c0c;
+  top: 160px;
+  left: 20px;
 }
 
 #paddle2 {
+  background-color: #0c66c3;
+  top: 160px;
+  left: 570px;
 }
 
 #net {
 }
 
 #ball {
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  top: 190px;
+  left: 290px;
+  position: absolute;
+  border-radius: 25px;
 }
 
 .score span {
+  display: inline-block;
+  font-size: 2em;
+}
+
+#score1{
+  color: #c30c0c
+}
+
+#score2{
+  color: #0c66c3
+}
+
+#keys1{
+  color: #c30c0c
+}
+
+#keys2{
+  color: #0c66c3
 }
 
 .left {
