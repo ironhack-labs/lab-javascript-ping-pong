@@ -8,11 +8,13 @@ var boardHeight = parseInt($('#board').css('height'))
 
 var intervalTime = 50
 
+var winner
+
+var game
 $('#start').on('click', function(){
   board.start()
   activatePaddle2()
-  var game = setInterval(updateState, intervalTime)
-  renderGame()
+  game = setInterval(updateState, intervalTime)
 })
 
 function updateState(){
@@ -40,9 +42,20 @@ function activatePaddle2() {
 }
 
 function renderGame(){
+  winner = board.ball.winner()
+  if(winner == 1){
+    $('#score1').text('win')
+    clearInterval(game)
+  }
+  if(winner == 2){
+    $('#score2').text('win')
+    clearInterval(game)
+  }
 }
 
 function renderScore(){
+  $('#score1').text(board.paddle1.score)
+  $('#score2').text(board.paddle2.score)
 }
 
 function renderBall(){

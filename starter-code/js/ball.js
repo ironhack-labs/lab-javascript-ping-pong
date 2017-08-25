@@ -34,6 +34,7 @@ Ball.prototype.checkCollision = function(){
   if(this.y == 0){
     console.log('Paddle2 score + 1')
     this.restart(190, 290, this.paddle1, this.paddle2)
+    this.paddle2.score++
   }
 
   // Ball hit on paddle1
@@ -48,6 +49,7 @@ Ball.prototype.checkCollision = function(){
   if(this.y == 580){
     console.log('Paddle1 score + 1')
     this.restart(190, 290, this.paddle1, this.paddle2)
+    this.paddle1.score++
   }
 
   // Ball hit on paddle2
@@ -72,6 +74,9 @@ Ball.prototype.pointScored = function(){
 
 // returns winner paddle or false
 Ball.prototype.winner = function(){
+  if(this.paddle1.score == 2) return this.paddle1.id
+  if(this.paddle2.score == 2) return this.paddle2.id
+  else return
 };
 
 Ball.prototype.restart = function(x,y, paddle1, paddle2){
