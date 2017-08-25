@@ -13,27 +13,33 @@ function updateState(){
 
 
 
+
+
 var interval = setInterval(function(keycode) {
-  
-// var ballTop= parseInt($("#ball").css('top'));
-// var ballLeft= parseInt($("#ball").css('left'));
-// var ballTop2= parseInt($("#ball").css('top'));
-// var ballLeft2= parseInt($("#ball").css('left'));
-//
-// ballTop += 30;
-// ballTop2 -=30;
-// ballLeft += 30;
-// ballLeft2 -=30;
-//
-//
-// if(ballTop>500){
-//   $("#ball").css("top", ballTop2 +"px");
-// }else if (ballTop<50){
-//
-// $("#ball").css("top", ballTop +"px");
-//
-//
-// }
+
+var ballTop= parseInt($("#ball").css('top'));
+var ballLeft= parseInt($("#ball").css('left'));
+var ballTop2= parseInt($("#ball").css('top'));
+var ballLeft2= parseInt($("#ball").css('left'));
+
+ballTop += 30;
+ballTop2 -=30;
+ballLeft += 30;
+ballLeft2 -=30;
+
+
+
+ if (ballTop<50 || ballLeft<70){
+  $("#ball").css("top", ballTop +"px");
+  $("#ball").css("left", ballLeft +"px");
+}else if(ballTop>500 && ballLeft>800){
+  $("#ball").css("top", ballTop2 +"px");
+  $("#ball").css("left", ballLeft2 +"px");
+
+}
+$("#ball").css("top", ballTop2 +"px");
+$("#ball").css("left", ballLeft2 +"px");
+
 
 
 
