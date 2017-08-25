@@ -11,41 +11,10 @@ $('#start').on('click', function(){
 function updateState(){
 }
 
-var ballTop= parseInt($("#ball").css('top'));
-var ballLeft= parseInt($("#ball").css('left'));
-var ballTop2= parseInt($("#ball").css('top'));
-var ballLeft2= parseInt($("#ball").css('left'));
 
-ballTop += 30;
-ballTop2 -=30;
-ballLeft += 30;
-ballLeft2 -=30;
 
-function moveTopLeft(){
-  if(ballTop>50 || ballLeft>50){
-  $("#ball").css("top", ballTop2 +"px");
-  $("#ball").css("left", ballLeft2 +"px");
-}else{
-  $("#ball").css("top", ballTop +"px");
-  $("#ball").css("left", ballLeft +"px");
-}
-}
 
-// function moveTopLeft(){
-// if(ballTop>50 && ballLeft>50){
-// $("#ball").css("top", ballTop2 +"px");
-// $("#ball").css("left", ballLeft2 +"px");
-// }else{
-//  moveBottomRigth();
-// }
-// }
-//
-//  function moveBottomRigth(){
-//    if(ballTop<50 && ballLeft<50){
-//    $("#ball").css("top", ballTop +"px");
-//    $("#ball").css("left", ballLeft +"px");
-//  }
-// }
+
 
 
 
@@ -62,7 +31,7 @@ var interval = setInterval(function(keycode) {
   ballLeft += 30;
   ballLeft2 -=30;
 
-  
+
 
   if(ballTop>50 && ballLeft>50){
 
