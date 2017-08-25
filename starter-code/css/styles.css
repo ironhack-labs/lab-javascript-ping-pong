@@ -1,46 +1,84 @@
 body {
+  background: black;
+  position: relative;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: white;
 }
 
 #board {
+  /*position: calc(50% - (350px - 250px));*/
+  background: green;
+  width: 600px;
+  height: 400px;
+  position: relative;
+  margin-left: 175px;
+  border: 2px solid white;
+  text-align: center;
 }
 
 .paddle {
+  height: 40px;
+  width: 15px;
+  border-radius: 10px;
 }
 
 #paddle1 {
+  background: red;
+  margin-left: 10px;
+  margin-top: 40px;
 }
 
 #paddle2 {
+  background: blue;
+  margin-left: 575px;
 }
 
-#net {
+.line-center {
+  width: 10px;
+  background: white;
+  height: 400px;
+  margin: -120px auto;
 }
+
+#net {}
 
 #ball {
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  background: white;
+  position: absolute;
+  top: 197px;
+  left: 307px;
 }
 
-.score span {
-}
+.score span {}
 
-.left {
-}
+.left {}
 
-.right {
-}
+.right {}
 
 button {
+  display: inline-block;
+  color: white;
 }
 
-#winner {
-}
+#winner {}
 
-#winner.hide {
-}
+#winner.hide {}
 
 @-webkit-keyframes slide {
-    100% { top: 20px; }
+  100% {
+    top: 20px;
+  }
 }
 
 @keyframes slide {
-    100% { top: 20px; }
+  100% {
+    top: 20px;
+  }
 }
