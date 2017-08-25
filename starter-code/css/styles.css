@@ -2,21 +2,41 @@ body {
 }
 
 #board {
+  width: 1200px;
+  height: 800px;
+  background: green;
+  position: relative;
+  margin: 40px auto;
 }
 
 .paddle {
+  background: blue;
+  width: 50px;
+  height: 230px;
+  position: absolute;
+  top: 250px
 }
 
 #paddle1 {
+  left: 50px;
+
 }
 
 #paddle2 {
+  left: 1100px;
 }
 
 #net {
 }
 
 #ball {
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+  background: white;
+  position: absolute;
+  top: 375px;
+  left: 550px;
 }
 
 .score span {
