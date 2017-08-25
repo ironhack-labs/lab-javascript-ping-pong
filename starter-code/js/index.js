@@ -1,30 +1,34 @@
-var board = new Board();
+$( document ).ready(function() {
+  var keys = {};
+   setInterval(checkControls, 30);
 
 
-$('#start').on('click', function(){
-  board.start();
-  activatePaddle2();
-  var game = setInterval(updateState, intervalTime);
-  renderGame();
+  var raqueta = new Paddle();
+  var pelota = new Ball();
+  setInterval(pelota.abajoderecha, 30);
+
+
+
+    $(document).keydown(function(e){
+     keys[e.keyCode] = true;
+      }).keyup(function(e){
+      delete keys[e.keyCode];
+    });
+
+    function checkControls(){
+      console.log("entro checkcontrol");
+      if (keys[39])
+        raqueta.moveleft();
+      else if (keys[37])
+        raqueta.moveright();
+      else if (keys[38])
+        raqueta.moveup();
+      else if (keys[40])
+        raqueta.movedown();
+    }
+
+  pelota.abajoderecha();
+  pelota.arribaderecha();
+  // pelota.rebote();
+
 });
-
-function updateState(){
-}
-
-$(document).on('keydown', function(e){
-});
-
-function activatePaddle2() {
-}
-
-function renderGame(){
-}
-
-function renderScore(){
-}
-
-function renderBall(){
-}
-
-function renderPaddle(){
-}
