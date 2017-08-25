@@ -1,16 +1,51 @@
 body {
+  background: black;
+  position: relative;
+  height: 100%;
+}
+
+h1{
+  text-align: center;
+  color: white;
 }
 
 #board {
+  /*position: calc(50% - (350px - 250px));*/
+  background : green;
+  width: 600px;
+  height: 400px;
+  position: relative;
+  margin-left: 175px;
+  border: 2px solid white;
+  text-align: center;
+
 }
 
 .paddle {
+  height: 40px;
+  width: 15px;
+  border-radius: 10px;
+
 }
 
 #paddle1 {
+  background: red;
+  margin-left: 10px;
+  margin-top: 40px;
+
 }
 
 #paddle2 {
+  background: blue;
+  margin-left: 575px;
+
+}
+
+.line-center {
+  width: 10px;
+  background: white;
+  height: 400px;
+  margin: -120px auto;
 }
 
 #net {
@@ -29,6 +64,8 @@ body {
 }
 
 button {
+  display: inline-block;
+  color: white;
 }
 
 #winner {
