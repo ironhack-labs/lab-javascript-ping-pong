@@ -1,10 +1,14 @@
 function Board() {
+  this.keys={};
 }
 
 Board.prototype.start = function(){
+  
 };
 
 Board.prototype.checkGame = function(){
+  console.log('hola');
+
 };
 
 Board.prototype.stop = function(){

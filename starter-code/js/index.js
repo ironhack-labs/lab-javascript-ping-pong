@@ -1,30 +1,36 @@
 var board = new Board();
+var paddle1 = new Paddle();
+
+$(document).ready(function() {
+  $('#start').on('click', function() {
+    board.start();
+    activatePaddle2();
+    var game = setInterval(checkControls, 30);
+  });
 
 
-$('#start').on('click', function(){
-  board.start();
-  activatePaddle2();
-  var game = setInterval(updateState, intervalTime);
-  renderGame();
+  var keys = {};
+  $(document).keydown(function(e) {
+    keys[e.keyCode] = true;
+  }).keyup(function(e) {
+    delete keys[e.keyCode];
+  });
+
+  function checkControls() {
+    console.log('hola')
+    if (keys[38]){
+      paddle1.moveup();
+    }
+    else if (keys[40]){
+      paddle1.movedown();
+    }
+  }
 });
 
-function updateState(){
-}
 
-$(document).on('keydown', function(e){
-});
+function updateState() {}
 
-function activatePaddle2() {
-}
 
-function renderGame(){
-}
 
-function renderScore(){
-}
 
-function renderBall(){
-}
-
-function renderPaddle(){
-}
+function activatePaddle2() {}
