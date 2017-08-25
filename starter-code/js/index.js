@@ -15,10 +15,31 @@
 
 $(document).ready(function() {
   var paddle = new Paddle()
-  var ball = new Ball()
   var keys = {}
   setInterval(checkControl, 30)
-  setInterval(movPelota, 50)
+
+  $('#start').on('click', function() {
+    var ball = new Ball(100, 100)
+    var upperLim = 10
+    var downLim = 545
+    y = $('#ball').css('top', ball.posY)
+    x = $('#ball').css('left', ball.posX)
+    setInterval(function () {
+      if (downLim >= ball.posY) {
+        ball.posX += 8
+        ball.posY += 8
+        console.log('Mov derecha abajo - x:' + ball.posX + ', y:' + ball.posY)
+        $('#ball').css('left', ball.posX)
+        $('#ball').css('top', ball.posY)
+      } else if(upperLim <= ball.posX){
+        ball.posX -= 8
+        ball.posY += 8
+        console.log('Mov derecha arriba - x:' + ball.posX + ', y:' + ball.posY)
+        $('#ball').css('left', ball.posX)
+        $('#ball').css('top', ball.posY)
+      }
+    }, 50)
+  })
 
   $(document).keydown(function(e) {
     keys[e.keyCode] = true;
@@ -28,17 +49,11 @@ $(document).ready(function() {
 
   function checkControl() {
     var x
-    if (keys[81])
+    if (keys[38])
       x = paddle.moveUp(parseInt($('#paddle1').css('top')))
-    else if (keys[65])
+    else if (keys[40])
       x = paddle.moveDown(parseInt($('#paddle1').css('top')))
 
     $('#paddle1').css('top', x + 'px')
-  }
-
-  function movPelota () {
-    if($('board').css('top', 440)){
-      ball.abajoDerecha()
-    }
   }
 })

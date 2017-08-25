@@ -7,8 +7,8 @@
 // }
 
 function Paddle () {
-  this.posX = 0
-  // this.posY
+  // this.posX = 0
+  this.posY = 0
   // this.size
   // this.score = score
 }
@@ -25,17 +25,17 @@ Paddle.prototype.winner = function () {
 
 }
 
-Paddle.prototype.moveUp = function (x) {
-    this.posX = x
-    if (this.posX >= 10) {
-      return this.posX -= 8
+Paddle.prototype.moveUp = function (y) {
+    this.posY = y
+    if (this.posY >= 10) {
+      return this.posY -= 8
     }
 }
 
-Paddle.prototype.moveDown = function (x) {
-    this.posX = x
-    if (this.posX <= 440) {
-      return this.posX += 8
+Paddle.prototype.moveDown = function (y) {
+    this.posY = y
+    if (this.posY <= 440) {
+      return this.posY += 8
     }
 }
 

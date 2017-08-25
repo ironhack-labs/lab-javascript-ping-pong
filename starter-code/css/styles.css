@@ -1,9 +1,13 @@
 body {
 }
 
+#start {
+  margin: 50px auto;
+}
+
 #board {
   background-color: red;
-  width: 800px;
+  width: 1000px;
   height: 600px;
   margin: 0 auto;
 }
