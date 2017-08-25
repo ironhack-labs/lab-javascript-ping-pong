@@ -13,45 +13,8 @@ function updateState(){
 
 
 
-
-// $( document ).ready(function() {
-//   var keys = {};
-//    setInterval(checkControls, 30);
-//
-//     $(document).keydown(function(e){
-//      keys[e.keyCode] = true;
-//       }).keyup(function(e){
-//       delete keys[e.keyCode];
-//     });
-//
-//     function checkControls(){
-//       console.log("entro checkcontrol");
-//       if (keys[81]){
-//         moveleft();
-//       }else if (keys[65])
-//         moveright();
-//       }
-//     }
-//
-//   function moveleft (){
-//     console.log("left");
-//      var a = parseInt($(".cuadrado").css('left'));
-//     a +=8;
-//     $(".cuadrado").css('left', a +'px');
-//   }
-//
-//    function moveright (){
-//     console.log("right");
-//     var b = parseInt($(".cuadrado").css('left'));
-//     b -=8;
-//     $(".cuadrado").css('left', b +'px') ;
-//   }
-//
-// });
-
-
 var interval = setInterval(function(keycode) {
-
+  
 // var ballTop= parseInt($("#ball").css('top'));
 // var ballLeft= parseInt($("#ball").css('left'));
 // var ballTop2= parseInt($("#ball").css('top'));
