@@ -1,4 +1,8 @@
 function Paddle(x,y) {
+  this.positionX = x;
+  this.positionY = y;
+  this.size = 0;
+  this.score = 0;
 }
 Paddle.prototype.restart = function(){
 };
