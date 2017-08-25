@@ -27,7 +27,7 @@ if (this.left == "right"){
   else {
     this.left="left";
   }
-}/*
+}
 if (this.top == "top") {
   if (this.positionY > this.minY) {
     this.positionY -= 20;
@@ -43,5 +43,5 @@ if (this.top == "bottom") {
   } else {
     this.top = "top";
   }
-}*/
+}
 };
