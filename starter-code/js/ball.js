@@ -2,8 +2,10 @@ function Ball(x,y, paddle1, paddle2) {
   this.control = 0;
   this.positionX = x;
   this.positionY = y;
-  this.againstPaddle1 = paddle1;
-  this.againstPaddle2 = paddle2;
+  this.directionX = "right";
+  this.directionY = "up";
+  // this.againstPaddle1 = paddle1;
+  // this.againstPaddle2 = paddle2;
   this.direction = this.randomDirection();
 }
 
@@ -18,41 +20,52 @@ Ball.prototype.move = function(){
 
 var howUp = parseInt($(myBall).css("top"));
 var howLeft = parseInt($(myBall).css("left"));
-  if(howUp === 55){
-    this.control = 1;
+
+if(this.directionY === "down"){
+  if(howUp<= 700){
+
+    howUp+= 10;
+  }else{
+    this.directionY = "up";
   }
-  if(howLeft === 1100){
-    this.control =  2;
+}
+if(this.directionX === "right"){
+  if(howLeft <1000){
+    howLeft +=10;
   }
-  if(howUp === 805){
-    this.control = 3;
-  }
-  if(howLeft === 50){
-    this.control = 0;
+  else if(howLeft >= 1000 && !(howUp >= paddle2.positionY && howUp<=(paddle2.positionY+250)) ){
+    howLeft += 10;
+    this.directionX ="right";
   }
 
-  switch (this.control) {
-    case 0:
-      howUp -= 10;
-      howLeft +=10;
-      break;
-      case 1:
-      howUp +=10;
-      console.log(howLeft);
-      howLeft += 10;
-      break;
-      case 2:
-      howUp +=10;
-      console.log(howUp);
-      howLeft -=10;
-      break;
-      case 3:
-      howUp -=10;
-      howLeft-=10;
-      break;
-    default:
+  else{
+    this.directionX ="left";
+  }
+}
+if(this.directionY === "up"){
+  if(howUp>=50){
+    howUp-= 10;
+  }
+
+  else{
+    this.directionY = "down";
+  }
+}
+if(this.directionX === "left"){
+  if(howLeft>100){
+    howLeft -=10;
 
   }
+  else if(howLeft <= 100 && !(howUp >= paddle.positionY && howUp<=(paddle.positionY+250)) ){
+    howLeft -= 10;
+    this.directionX ="left";
+  }
+
+  else{
+    this.directionX ="right";
+  }
+}
+
 $(myBall).css("top", howUp);
 $(myBall).css("left", howLeft);
 

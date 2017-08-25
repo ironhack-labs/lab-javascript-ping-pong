@@ -19,6 +19,8 @@ Paddle.prototype.moveUp = function(whichPaddle){
   if(howUp > 10){
   howUp -=10;
   $(whichPaddle).css("top", howUp + "px");
+  this.positionY = howUp;
+  console.log("I start at " +howUp + " until " + howUp+230);
 }
 
 };
@@ -28,6 +30,7 @@ Paddle.prototype.moveDown = function(whichPaddle){
   if(howDown < 560)
   howDown +=10;
   $(whichPaddle).css("top", howDown + "px");
+  
 };
 
 function activatePaddle2() {

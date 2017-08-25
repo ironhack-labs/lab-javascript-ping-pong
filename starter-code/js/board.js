@@ -30,9 +30,10 @@ function renderScore(){
 }
 
 function renderBall(){
-  
+
 }
 
 Board.prototype.updateState= function(){
+
   ball.move();
 };
