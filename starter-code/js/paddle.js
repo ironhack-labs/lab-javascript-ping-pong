@@ -16,10 +16,10 @@ Paddle.prototype.hitBall = function(ball_y){
 
 }
 
-Paddle.prototype.moveDown = function(paddle1Top){
-  board.paddle1.x = paddle1Top + 5
+Paddle.prototype.moveDown = function(paddleTop){
+  this.x = paddleTop + 5
 }
 
-Paddle.prototype.moveUp = function(paddle1Top){
-  board.paddle1.x = paddle1Top - 5
+Paddle.prototype.moveUp = function(paddleTop){
+  this.x = paddleTop - 5
 }

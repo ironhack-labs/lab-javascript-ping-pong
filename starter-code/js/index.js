@@ -1,5 +1,6 @@
 var board = new Board()
 var paddle1Top
+var paddle2Top
 var paddleHeigth = parseInt($('.paddle').css('height'))
 var paddleWidth = parseInt($('.paddle').css('width'))
 var boardTop = parseInt($('#board').css('top'))
@@ -26,15 +27,28 @@ function updateState(){
 
 $(document).on('keydown', function(e){
   if(e.keyCode == 40){ //Arrow down
+    paddle2Top = parseInt($('#paddle2').css('top'))
+    if(paddleHeigth + paddle2Top < boardHeight)
+      board.paddle2.moveDown(paddle2Top)
+  }
+  if(e.keyCode == 38){ //Arrow up
+    paddle2Top = parseInt($('#paddle2').css('top'))
+    if(paddle2Top > 0)
+      board.paddle2.moveUp(paddle2Top)
+  }
+
+  if(e.keyCode == 65){ //A -> paddle1 down
     paddle1Top = parseInt($('#paddle1').css('top'))
     if(paddleHeigth + paddle1Top < boardHeight)
       board.paddle1.moveDown(paddle1Top)
   }
-  if(e.keyCode == 38){ //Arrow up
+
+  if(e.keyCode == 81){ //Q -> paddle1 up
     paddle1Top = parseInt($('#paddle1').css('top'))
     if(paddle1Top > 0)
       board.paddle1.moveUp(paddle1Top)
   }
+
 })
 
 function activatePaddle2() {
@@ -44,18 +58,18 @@ function activatePaddle2() {
 function renderGame(){
   winner = board.ball.winner()
   if(winner == 1){
-    $('#score1').text('win')
+    $('#score1').children('span').text('win')
     clearInterval(game)
   }
   if(winner == 2){
-    $('#score2').text('win')
+    $('#score2').children('span').text('win')
     clearInterval(game)
   }
 }
 
 function renderScore(){
-  $('#score1').text(board.paddle1.score)
-  $('#score2').text(board.paddle2.score)
+  $('#score1').children('span').text(board.paddle1.score)
+  $('#score2').children('span').text(board.paddle2.score)
 }
 
 function renderBall(){
