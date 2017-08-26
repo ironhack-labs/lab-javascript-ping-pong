@@ -1,22 +1,64 @@
 body {
+  background: url("../img/board-background.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+/*h1 {
+  font-size: 20px;
+  text-align: center;
+  line-height: normal;
+}
+*/
+
 #board {
+  margin: 100px auto;
+  width: 900px;
+  height: 500px;
+  background: rgba(50, 0, 25, 0.7);
+  border: 5px solid #FFF;
 }
 
 .paddle {
+  width: 15px;
+  height: 90px;
+  position: absolute;
 }
 
 #paddle1 {
+  top: 300px;
+  left: 280px;
+  background: #0000AA;
+  border: 2px solid #FFF;
+  border-radius: 5px;
 }
 
 #paddle2 {
+  top: 300px;
+  left: 1140px;
+  background: #AA0000;
+  border: 2px solid #FFF;
+  border-radius: 5px;
 }
 
 #net {
+  background: #FFF;
+  position: absolute;
+  top: 100px;
+  left: 715px;
+  width: 5px;
+  height: 510px;
 }
 
 #ball {
+  position: absolute;
+  top: 300px;
+  left: 265px;
+  background: white;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
 }
 
 .score span {
@@ -29,6 +71,17 @@ body {
 }
 
 button {
+  position: absolute;
+  top: 650px;
+  text-align: center;
+  margin: 0px 660px;
+  height: 50px;
+  width: 100px;
+  font-size: 25px;
+  color: #FFF;
+  border: 4px solid #FFF;
+  border-radius: 20px;
+  background: #2ECC40;
 }
 
 #winner {
